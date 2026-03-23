@@ -16,8 +16,8 @@ export default function About() {
           >
             <div className="relative overflow-hidden rounded-sm shadow-xl">
               <img
-                src="/assets/generated/about-manufacturing.dim_800x600.jpg"
-                alt="Construction chemicals manufacturing facility"
+                src="/assets/generated/about-tileadhesive-plant.dim_800x600.jpg"
+                alt="Tile adhesive and construction chemical manufacturing facility"
                 className="w-full h-80 lg:h-96 object-cover"
               />
             </div>
@@ -46,18 +46,25 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Golden Inning is a professional consultancy platform led by{" "}
+                Golden Inning is an independent professional consultancy led by{" "}
                 <strong className="text-foreground font-semibold">
                   Devraj Gohil
                 </strong>
-                , providing advisory services for construction chemical
-                manufacturing businesses.
+                , offering expert advisory services across construction chemical
+                manufacturing — from dry mix plants and tile adhesive facilities
+                to wall putty and waterproofing production setups.
               </p>
               <p>
-                With over 34 years of industry leadership experience, the
-                consultancy supports promoters, investors and manufacturers in
-                setting up and growing construction chemical manufacturing
+                With over 34 years of manufacturing and industry leadership
+                experience, the consultancy provides strategic, neutral, and
+                independent guidance to promoters, investors and manufacturers
+                seeking to establish or grow construction chemical manufacturing
                 operations.
+              </p>
+              <p className="text-sm">
+                The advisory focus spans plant setup, production stabilisation,
+                product portfolio development and business strategy — always
+                aligned with the client's specific goals and market context.
               </p>
             </div>
             <div className="mt-8">
@@ -65,8 +72,13 @@ export default function About() {
                 data-ocid="about.secondary_button"
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                onClick={() =>
+                  document
+                    .querySelector("#contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
-                Read Full Profile
+                Enquire About Advisory Services
               </Button>
             </div>
           </motion.div>

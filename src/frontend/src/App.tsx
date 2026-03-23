@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ExperienceSnapshot from "./components/ExperienceSnapshot";
 import Footer from "./components/Footer";
 import GlobalConsultancy from "./components/GlobalConsultancy";
 import Hero from "./components/Hero";
@@ -21,6 +22,7 @@ export default function App() {
         <section id="about">
           <About />
         </section>
+        <ExperienceSnapshot />
         <section id="services">
           <Services />
         </section>
