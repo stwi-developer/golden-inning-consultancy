@@ -6,38 +6,57 @@ export default function Footer() {
     typeof window !== "undefined" ? window.location.hostname : "";
 
   return (
-    <footer style={{ backgroundColor: "oklch(0.15 0.04 145)" }}>
+    <footer
+      style={{
+        backgroundColor: "#FAFAF8",
+        borderTop: "1px solid #EEEBE4",
+      }}
+    >
+      <style>{`
+        .footer-email-link { color: #6B6560; transition: color 0.2s; font-size: 0.875rem; font-weight: 300; }
+        .footer-email-link:hover { color: #2B2B2B; }
+        .footer-social-btn { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, color 0.2s; border: 1px solid #E0DDD7; color: #2B2B2B; }
+        .footer-social-btn:hover { border-color: #B8956A; color: #B8956A; }
+      `}</style>
+
       {/* Main footer */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-10">
+      <div className="container mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-3 gap-16">
           {/* Col 1: Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-5">
               <div
-                className="w-10 h-10 rounded flex items-center justify-center text-white font-bold text-sm"
-                style={{ backgroundColor: "oklch(0.32 0.08 145)" }}
+                className="w-8 h-8 rounded flex items-center justify-center text-white font-semibold text-xs flex-shrink-0"
+                style={{ backgroundColor: "#2B2B2B" }}
               >
                 GI
               </div>
-              <div>
-                <div className="font-bricolage font-bold text-white text-base">
-                  Golden Inning Consultancy
-                </div>
+              <div
+                className="font-semibold text-sm"
+                style={{ color: "#2B2B2B" }}
+              >
+                Golden Inning Consultancy
               </div>
             </div>
-            <p className="text-white/50 text-sm leading-relaxed">
+            <p
+              className="text-xs font-light leading-loose"
+              style={{ color: "#6B6560" }}
+            >
               Construction Chemicals Manufacturing Advisory
             </p>
           </div>
 
           {/* Col 2: Contact */}
           <div>
-            <h4 className="font-semibold text-white/80 text-sm mb-4 uppercase tracking-wider">
+            <h4
+              className="text-xs tracking-widest uppercase font-medium mb-5 leading-relaxed"
+              style={{ color: "#9A9590" }}
+            >
               Contact
             </h4>
             <a
               href="mailto:devrajgohil@gmail.com"
-              className="text-white/60 hover:text-white text-sm transition-colors"
+              className="footer-email-link"
             >
               devrajgohil@gmail.com
             </a>
@@ -45,7 +64,10 @@ export default function Footer() {
 
           {/* Col 3: Social */}
           <div>
-            <h4 className="font-semibold text-white/80 text-sm mb-4 uppercase tracking-wider">
+            <h4
+              className="text-xs tracking-widest uppercase font-medium mb-5 leading-relaxed"
+              style={{ color: "#9A9590" }}
+            >
               Follow Us
             </h4>
             <div className="flex items-center gap-3">
@@ -54,20 +76,20 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/devrajgohil/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded flex items-center justify-center text-white/60 hover:text-white border border-white/10 hover:border-white/30 transition-colors"
+                className="footer-social-btn"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={18} />
+                <Linkedin size={16} />
               </a>
               <a
                 data-ocid="footer.link.2"
                 href="https://www.youtube.com/@GoldenInning"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded flex items-center justify-center text-white/60 hover:text-white border border-white/10 hover:border-white/30 transition-colors"
+                className="footer-social-btn"
                 aria-label="YouTube"
               >
-                <Youtube size={18} />
+                <Youtube size={16} />
               </a>
             </div>
           </div>
@@ -75,14 +97,17 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/40">
+      <div style={{ borderTop: "1px solid #EEEBE4" }}>
+        <div
+          className="container mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs"
+          style={{ color: "#B0ACA6" }}
+        >
           <span>© {year} Golden Inning Consultancy. All rights reserved.</span>
           <a
             href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(hostname)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white/60 transition-colors"
+            className="transition-colors hover:text-[#6B6560]"
           >
             Built with ❤ using caffeine.ai
           </a>

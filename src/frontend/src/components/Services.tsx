@@ -30,48 +30,52 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="py-20 bg-muted">
+    <div
+      className="py-36 bg-white"
+      id="services"
+      style={{ borderTop: "1px solid #EAEAEA" }}
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <p
-            className="text-xs font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "oklch(0.32 0.08 145)" }}
+            className="text-xs font-medium tracking-[0.15em] uppercase mb-3"
+            style={{ color: "oklch(0.54 0.10 68)" }}
           >
             What We Offer
           </p>
-          <h2 className="font-bricolage text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-bricolage text-3xl lg:text-4xl font-semibold text-foreground mb-8">
             Core Consultancy Services
           </h2>
           <div
-            className="w-16 h-1 mx-auto rounded-full"
-            style={{ backgroundColor: "oklch(0.32 0.08 145)" }}
+            className="w-12 mx-auto"
+            style={{ height: "1px", backgroundColor: "#EAEAEA" }}
           />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               data-ocid={`services.card.${i + 1}`}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-card border border-border rounded p-6 hover:shadow-lg hover:border-primary transition-all duration-300 cursor-default"
+              className="group cursor-default"
             >
-              <div
-                className="w-12 h-12 rounded flex items-center justify-center mb-5 transition-colors"
-                style={{ backgroundColor: "oklch(0.32 0.08 145 / 0.08)" }}
-              >
+              <div className="mb-5">
                 <service.icon
-                  size={22}
-                  style={{ color: "oklch(0.32 0.08 145)" }}
+                  size={20}
+                  style={{ color: "oklch(0.54 0.10 68)", strokeWidth: 1.5 }}
                 />
               </div>
-              <h3 className="font-bricolage font-bold text-base text-foreground mb-3">
+              <h3 className="font-bricolage font-semibold text-base text-foreground mb-3 leading-snug">
                 {service.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p
+                className="text-sm font-light leading-loose"
+                style={{ color: "oklch(0.48 0.03 65)" }}
+              >
                 {service.description}
               </p>
             </motion.div>

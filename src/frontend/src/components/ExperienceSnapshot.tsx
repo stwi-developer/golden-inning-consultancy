@@ -28,44 +28,55 @@ const blocks = [
 
 export default function ExperienceSnapshot() {
   return (
-    <div className="py-20" style={{ backgroundColor: "oklch(0.97 0.01 145)" }}>
+    <div
+      className="py-36"
+      style={{ backgroundColor: "#F5F3EF", borderTop: "1px solid #EAEAEA" }}
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <p
-            className="text-xs font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "oklch(0.32 0.08 145)" }}
+            className="text-xs font-medium tracking-[0.15em] uppercase mb-3"
+            style={{ color: "oklch(0.54 0.10 68)" }}
           >
             Why Golden Inning
           </p>
-          <h2 className="font-bricolage text-3xl lg:text-4xl font-bold text-foreground">
+          <h2
+            className="font-bricolage text-3xl lg:text-4xl font-semibold"
+            style={{ color: "#1A1A1A" }}
+          >
             Industry Experience Snapshot
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {blocks.map((block, i) => (
             <motion.div
               key={block.label}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white border border-border rounded p-7 text-center"
+              className="p-8"
               style={{
-                borderTopWidth: "3px",
-                borderTopColor: "oklch(0.32 0.08 145)",
+                borderLeft: "2px solid rgba(184,149,106,0.4)",
               }}
             >
               <div
-                className="font-bricolage text-2xl font-bold mb-2"
-                style={{ color: "oklch(0.32 0.08 145)" }}
+                className="font-bricolage text-2xl font-semibold mb-2"
+                style={{ color: "oklch(0.52 0.10 68)" }}
               >
                 {block.number}
               </div>
-              <div className="font-semibold text-foreground text-sm mb-2 leading-snug">
+              <div
+                className="font-semibold text-sm mb-3 leading-snug"
+                style={{ color: "#2B2B2B" }}
+              >
                 {block.label}
               </div>
-              <div className="text-xs text-muted-foreground leading-relaxed">
+              <div
+                className="text-xs font-light leading-loose"
+                style={{ color: "oklch(0.42 0.03 65)" }}
+              >
                 {block.detail}
               </div>
             </motion.div>

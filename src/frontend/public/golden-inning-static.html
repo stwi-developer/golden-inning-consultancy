@@ -5,183 +5,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golden Inning Consultancy | Construction Chemicals Manufacturing Advisory</title>
   <meta name="description" content="Golden Inning Consultancy provides expert advisory services for construction chemical manufacturing businesses. Plant setup, production stabilisation, business growth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #2d4a2d;
-      --primary-light: #3a5e3a;
-      --primary-dark: #1e3320;
-      --white: #ffffff;
-      --off-white: #f8f9f6;
-      --light-grey: #e8ece8;
-      --mid-grey: #9aa89a;
-      --text-dark: #1a2a1a;
-      --text-body: #3d4d3d;
-      --radius: 4px;
-      --shadow: 0 2px 16px rgba(0,0,0,0.08);
-      --shadow-md: 0 4px 24px rgba(0,0,0,0.12);
+      --primary: #B8956A;
+      --primary-dark: #9a7850;
+      --gold-soft: #B8956A;
+      --off-white: #F5F3EF;
+      --light-grey: #EAEAEA;
+      --mid-grey: #9A9590;
+      --text-dark: #2B2B2B;
+      --text-heading: #1A1A1A;
+      --text-body: #3B3530;
+      --footer-bg: #FAFAF8;
+      --footer-text: #2B2B2B;
+      --footer-secondary: #6B6560;
+      --trust-bg: #FFFFFF;
+      --section-alt-bg: #F5F3EF;
+      --section-light-bg: #FAFAFA;
+      --radius: 6px;
+      --shadow-sm: 0 2px 16px rgba(0,0,0,0.06);
+      --section-divider: 1px solid #EAEAEA;
+      --max-width: 1200px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.7; color: var(--text-body); background: var(--white); }
+    body {
+      font-family: 'Inter', 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.9;
+      font-weight: 400;
+      color: var(--text-body);
+      background: #fff;
+    }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
-    .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--text-dark); margin-bottom: 12px; }
-    .section-sub { color: var(--mid-grey); font-size: 0.95rem; max-width: 540px; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: oklch(0.54 0.10 68);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .section-sub { color: var(--mid-grey); font-size: 0.9rem; max-width: 540px; font-weight: 300; line-height: 1.9; }
     .section-sub.centered { margin: 0 auto; text-align: center; }
-    .title-underline { width: 48px; height: 3px; background: var(--primary); margin: 12px 0 40px; }
-    .title-underline.centered { margin: 12px auto 40px; }
+    .title-divider { width: 48px; height: 1px; background: var(--light-grey); margin: 16px 0 48px; }
+    .title-divider.centered { margin: 16px auto 48px; }
 
     /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--light-grey); box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: var(--section-divider); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
     .nav-logo { display: flex; align-items: center; gap: 12px; }
-    .nav-logo-mark { width: 40px; height: 40px; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; border-radius: var(--radius); }
+    .nav-logo-mark { width: 36px; height: 36px; background: var(--text-dark); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 12px; border-radius: var(--radius); }
     .nav-logo-text { font-weight: 600; color: var(--text-dark); font-size: 0.95rem; line-height: 1.2; }
-    .nav-logo-sub { font-size: 0.7rem; color: var(--mid-grey); }
-    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-    .nav-links a { color: var(--text-body); font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-logo-sub { font-size: 0.7rem; color: var(--mid-grey); font-weight: 300; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-body); font-weight: 400; font-size: 0.875rem; transition: color 0.2s; }
     .nav-links a:hover { color: var(--primary); }
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; flex-direction: column; gap: 5px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-dark); }
-    .mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--light-grey); padding: 16px 24px; }
+    .mobile-menu { display: none; flex-direction: column; background: #fff; border-top: var(--section-divider); padding: 16px 24px; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a { padding: 12px 0; border-bottom: 1px solid var(--light-grey); color: var(--text-body); font-weight: 500; }
+    .mobile-menu a { padding: 12px 0; border-bottom: var(--section-divider); color: var(--text-body); font-weight: 400; font-size: 0.9rem; }
 
     /* BUTTONS */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 28px; font-size: 0.9rem; font-weight: 600; border-radius: var(--radius); cursor: pointer; transition: all 0.2s; text-decoration: none; }
-    .btn-primary { background: var(--primary); color: white; border: 2px solid var(--primary); }
-    .btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
-    .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.7); }
-    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
-    .btn-outline-dark { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-    .btn-outline-dark:hover { background: var(--primary); color: white; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 28px; font-size: 0.875rem; font-weight: 400; border-radius: var(--radius); cursor: pointer; transition: all 0.2s; text-decoration: none; }
+    .btn-outline-gold { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+    .btn-outline-gold:hover { background-color: #F5F0E8; }
+    .btn-outline-dark { background: transparent; color: var(--text-dark); border: 1px solid var(--light-grey); }
+    .btn-outline-dark:hover { border-color: var(--primary); color: var(--primary); }
 
-    /* HERO */
-    #home { min-height: 100vh; background: url('/assets/generated/hero-plant.dim_1600x900.jpg') center/cover no-repeat; position: relative; display: flex; align-items: center; }
-    .hero-overlay { position: absolute; inset: 0; background: rgba(10,20,10,0.70); }
-    .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 80px 0; }
-    .hero-badge { display: inline-block; background: var(--primary); color: white; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; }
-    .hero-title { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 20px; }
-    .hero-subheadline { font-size: 1.1rem; color: rgba(255,255,255,0.75); font-weight: 500; margin-bottom: 20px; letter-spacing: 0.3px; }
-    .hero-body { font-size: 1rem; color: rgba(255,255,255,0.65); margin-bottom: 36px; max-width: 520px; }
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    /* NAV ICONS */
+    .icon-sm { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; flex-shrink: 0; }
+    .icon-xs { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; flex-shrink: 0; }
+
+    /* HERO SPLIT */
+    #home { }
+    .hero-split { display: flex; flex-direction: row; min-height: 560px; }
+    .hero-image-side { width: 45%; flex-shrink: 0; overflow: hidden; position: relative; }
+    .hero-image-side img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 560px; filter: brightness(0.90) saturate(0.78) contrast(0.95); }
+    .hero-image-side::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, rgba(200,169,106,0.18), rgba(200,169,106,0)); pointer-events: none; }
+    .hero-text-side { width: 55%; background: #fff; display: flex; flex-direction: column; justify-content: center; padding: 96px 96px 96px 64px; }
+    .hero-text-inner { max-width: 440px; }
+    .hero-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: oklch(0.54 0.10 68); margin-bottom: 32px; }
+    .hero-title { font-size: clamp(1.5rem, 2.6vw, 2.4rem); font-weight: 600; color: var(--text-dark); line-height: 1.3; margin-bottom: 32px; letter-spacing: -0.01em; }
+    .hero-subheadline { font-size: 0.875rem; color: #6b7280; font-weight: 300; margin-bottom: 32px; line-height: 2; }
+    .hero-divider { width: 48px; height: 1px; background: var(--primary); border: none; margin: 0 0 32px 0; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(184,149,106,0.3); color: #9a7840; padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 400; margin-bottom: 32px; width: fit-content; }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; flex-shrink: 0; opacity: 0.8; }
+    .hero-body { font-size: 0.875rem; color: #6b7280; font-weight: 300; max-width: 420px; line-height: 2; }
+    @media (max-width: 768px) {
+      .hero-split { flex-direction: column; }
+      .hero-image-side { width: 100%; height: 260px; }
+      .hero-image-side img { min-height: 260px; height: 260px; }
+      .hero-text-side { width: 100%; padding: 56px 24px; }
+    }
 
     /* TRUST STRIP */
-    #trust-strip { background: var(--primary); padding: 24px 0; }
-    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-    .trust-item { display: flex; align-items: center; gap: 12px; color: white; padding: 8px 0; border-right: 1px solid rgba(255,255,255,0.15); }
+    #trust-strip { background: var(--trust-bg); padding: 40px 0; border-bottom: var(--section-divider); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .trust-item { display: flex; align-items: center; gap: 12px; color: var(--text-dark); padding: 8px 16px 8px 0; border-right: var(--section-divider); }
     .trust-item:last-child { border-right: none; }
-    .trust-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.12); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .trust-icon svg { width: 18px; height: 18px; stroke: white; fill: none; stroke-width: 2; }
-    .trust-text strong { display: block; font-size: 0.88rem; font-weight: 600; }
-    .trust-text span { font-size: 0.75rem; opacity: 0.75; }
+    .trust-icon { color: oklch(0.54 0.10 68); }
+    .trust-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; flex-shrink: 0; }
+    .trust-text { font-size: 0.875rem; font-weight: 400; color: var(--text-dark); }
 
     /* ABOUT */
-    #about { padding: 96px 0; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .about-image { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
-    .about-image img { width: 100%; height: 420px; object-fit: cover; }
-    .about-text p { color: var(--text-body); margin-bottom: 16px; line-height: 1.8; }
+    #about { padding: 144px 0; background: #fff; border-top: var(--section-divider); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-image { border-radius: var(--radius); overflow: hidden; }
+    .about-image img { width: 100%; height: 400px; object-fit: cover; filter: brightness(0.96) saturate(0.88); }
+    .about-text p { color: var(--text-body); margin-bottom: 16px; line-height: 1.9; font-size: 0.9rem; font-weight: 300; }
+    .about-text strong { font-weight: 600; color: var(--text-dark); }
 
     /* EXPERIENCE SNAPSHOT */
-    #experience { padding: 96px 0; background: var(--off-white); }
-    .exp-header { text-align: center; margin-bottom: 56px; }
-    .exp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-    .exp-card { background: var(--white); border: 1px solid var(--light-grey); border-top: 3px solid var(--primary); border-radius: var(--radius); padding: 32px 24px; text-align: center; }
-    .exp-number { font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 6px; }
-    .exp-label { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; line-height: 1.3; }
-    .exp-detail { font-size: 0.8rem; color: var(--mid-grey); line-height: 1.6; }
+    #experience { padding: 144px 0; background: var(--section-alt-bg); border-top: var(--section-divider); }
+    .exp-header { text-align: center; margin-bottom: 64px; }
+    .exp-header .section-title { color: var(--text-heading); }
+    .exp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 48px; }
+    .exp-card { padding: 32px; border-left: 2px solid rgba(184,149,106,0.4); }
+    .exp-number { font-size: 1.5rem; font-weight: 600; color: oklch(0.52 0.10 68); margin-bottom: 8px; }
+    .exp-label { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; line-height: 1.3; }
+    .exp-detail { font-size: 0.8rem; color: oklch(0.42 0.03 65); line-height: 1.9; font-weight: 300; }
 
     /* SERVICES */
-    #services { padding: 96px 0; }
+    #services { padding: 144px 0; background: #fff; border-top: var(--section-divider); }
     .services-header { text-align: center; }
-    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-    .service-card { background: var(--white); border: 1px solid var(--light-grey); border-radius: var(--radius); padding: 32px 24px; transition: all 0.25s; }
-    .service-card:hover { box-shadow: var(--shadow-md); border-color: var(--primary); transform: translateY(-2px); }
-    .service-icon { width: 48px; height: 48px; background: rgba(45,74,45,0.08); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-    .service-icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 1.5; }
-    .service-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
-    .service-desc { font-size: 0.875rem; color: var(--text-body); line-height: 1.7; }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; }
+    .service-card { }
+    .service-icon { color: oklch(0.54 0.10 68); margin-bottom: 20px; }
+    .service-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; display: block; }
+    .service-title { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; line-height: 1.3; }
+    .service-desc { font-size: 0.85rem; color: var(--text-body); line-height: 1.9; font-weight: 300; }
 
     /* SEGMENTS */
-    #industry-segments { padding: 96px 0; background: var(--off-white); }
-    .segments-header { text-align: center; margin-bottom: 56px; }
-    .segments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .segment-card { border: 1px solid var(--light-grey); border-top: 3px solid var(--primary); border-radius: var(--radius); padding: 36px 28px; background: var(--white); }
-    .segment-icon-wrap { width: 44px; height: 44px; background: rgba(45,74,45,0.08); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-    .segment-icon-wrap svg { width: 22px; height: 22px; stroke: var(--primary); fill: none; stroke-width: 1.5; }
-    .segment-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
-    .segment-desc { font-size: 0.85rem; color: var(--text-body); line-height: 1.7; margin-bottom: 20px; }
+    #industry-segments { padding: 144px 0; background: var(--section-light-bg); border-top: var(--section-divider); }
+    .segments-header { text-align: center; margin-bottom: 64px; }
+    .segments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+    .segment-card { border-left: 2px solid rgba(184,149,106,0.5); padding-left: 24px; }
+    .segment-icon { color: oklch(0.54 0.10 68); margin-bottom: 20px; }
+    .segment-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; display: block; }
+    .segment-title { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; }
+    .segment-desc { font-size: 0.85rem; color: var(--text-body); line-height: 1.9; font-weight: 300; margin-bottom: 20px; }
     .segment-divider { height: 1px; background: var(--light-grey); margin-bottom: 16px; }
     .segment-list { list-style: none; }
-    .segment-list li { padding: 5px 0; font-size: 0.82rem; color: var(--text-body); display: flex; align-items: center; gap: 8px; }
-    .seg-dot { width: 6px; height: 6px; background: var(--primary); border-radius: 50%; opacity: 0.6; flex-shrink: 0; }
+    .segment-list li { padding: 4px 0; font-size: 0.8rem; color: var(--mid-grey); display: flex; align-items: center; gap: 8px; font-weight: 300; }
+    .seg-dot { width: 4px; height: 4px; background: oklch(0.54 0.10 68); border-radius: 50%; flex-shrink: 0; }
+    .segment-link { color: var(--mid-grey); font-size: 0.8rem; font-weight: 300; text-decoration: none; transition: color 0.2s; }
+    .segment-link:hover { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
 
     /* VIDEOS */
-    #videos { padding: 96px 0; }
-    .videos-header { text-align: center; margin-bottom: 48px; }
-    .videos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 40px; }
-    .video-block { border: 1px solid var(--light-grey); border-radius: var(--radius); overflow: hidden; background: var(--white); }
-    .video-wrap { position: relative; padding-top: 56.25%; background: #1a1a1a; }
+    #videos { padding: 144px 0; background: #fff; border-top: var(--section-divider); }
+    .videos-header { text-align: center; margin-bottom: 56px; }
+    .videos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 56px; }
+    .video-block { overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+    .video-wrap { position: relative; padding-top: 56.25%; }
     .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-    .video-title { padding: 14px 16px; font-size: 0.875rem; font-weight: 600; color: var(--text-dark); border-top: 1px solid var(--light-grey); line-height: 1.4; }
+    .video-title { padding: 12px 4px 8px; font-size: 0.875rem; font-weight: 400; color: var(--text-dark); line-height: 1.4; }
     .videos-cta { text-align: center; }
 
     /* GLOBAL */
-    #global { padding: 96px 0; background: var(--primary-dark); position: relative; overflow: hidden; }
-    .global-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; }
-    .global-content .section-title { color: white; }
-    .global-content p { color: rgba(255,255,255,0.7); margin-bottom: 24px; line-height: 1.8; }
-    .regions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
-    .region-badge { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 6px 18px; font-size: 0.85rem; font-weight: 500; }
-    .delivery-title { color: rgba(255,255,255,0.55); font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+    #global { padding: 144px 0; background: var(--section-light-bg); border-top: var(--section-divider); }
+    .global-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 112px; align-items: start; }
+    .global-content p { color: oklch(0.40 0.02 60); margin-bottom: 24px; line-height: 1.9; font-size: 0.9rem; font-weight: 300; }
+    .regions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
+    .region-badge { background: #fff; color: var(--text-dark); border: 1px solid #E8E4DC; border-radius: var(--radius); padding: 7px 16px; font-size: 0.85rem; font-weight: 300; display: flex; align-items: center; gap: 6px; }
+    .region-badge-icon { color: oklch(0.54 0.10 68); display: flex; align-items: center; }
+    .region-badge-icon svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .delivery-title { color: oklch(0.54 0.10 68); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; font-weight: 500; }
     .delivery-list { list-style: none; }
-    .delivery-list li { color: rgba(255,255,255,0.8); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
-    .delivery-list li::before { content: ''; width: 6px; height: 6px; background: rgba(255,255,255,0.5); border-radius: 50%; flex-shrink: 0; }
+    .delivery-list li { color: oklch(0.40 0.02 60); padding: 14px 0; border-bottom: var(--section-divider); font-size: 0.875rem; display: flex; align-items: center; gap: 14px; font-weight: 300; }
+    .delivery-list li:first-child { border-top: var(--section-divider); }
+    .delivery-icon { color: oklch(0.54 0.10 68); display: flex; align-items: center; }
+    .delivery-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
     /* CONTACT */
-    #contact { padding: 96px 0; text-align: center; }
+    #contact { padding: 144px 0; text-align: center; background: var(--section-light-bg); border-top: var(--section-divider); }
     .contact-inner { max-width: 520px; margin: 0 auto; }
-    .contact-email { display: inline-block; font-size: 1.2rem; font-weight: 600; color: var(--primary); margin: 20px 0 32px; }
+    .contact-icon-wrap { width: 56px; height: 56px; border-radius: 50%; background: #fff; border: 1px solid var(--light-grey); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; }
+    .contact-icon-wrap svg { width: 22px; height: 22px; stroke: oklch(0.54 0.10 68); fill: none; stroke-width: 1.5; }
+    .contact-email { display: inline-block; font-size: 1.1rem; font-weight: 400; color: oklch(0.54 0.10 68); margin: 20px 0 40px; }
     .contact-email:hover { text-decoration: underline; }
 
     /* FOOTER */
-    footer { background: #0f1f0f; padding: 56px 0 32px; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .footer-brand-name { color: white; font-weight: 700; font-size: 1rem; margin: 12px 0 4px; }
-    .footer-brand-sub { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
-    .footer-col-title { color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
-    .footer-link { color: rgba(255,255,255,0.7); font-size: 0.875rem; transition: color 0.2s; }
-    .footer-link:hover { color: white; }
-    .social-links { display: flex; gap: 12px; margin-top: 8px; }
-    .social-btn { width: 38px; height: 38px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-    .social-btn:hover { background: var(--primary); border-color: var(--primary); }
-    .social-btn svg { width: 16px; height: 16px; stroke: white; fill: none; stroke-width: 2; }
-    .footer-bottom { padding-top: 24px; text-align: center; color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+    footer { background: var(--footer-bg); border-top: var(--section-divider); padding: 80px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; padding-bottom: 56px; }
+    .footer-logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-logo-mark { width: 32px; height: 32px; background: var(--text-dark); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 11px; border-radius: 4px; }
+    .footer-brand-name { color: var(--footer-text); font-weight: 600; font-size: 0.875rem; }
+    .footer-brand-sub { color: var(--footer-secondary); font-size: 0.75rem; font-weight: 300; margin-top: 6px; line-height: 1.6; }
+    .footer-col-title { color: #9A9590; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; font-weight: 500; line-height: 1.8; }
+    .footer-link { color: var(--footer-secondary); font-size: 0.875rem; transition: color 0.2s; font-weight: 300; }
+    .footer-link:hover { color: var(--footer-text); }
+    .social-links { display: flex; gap: 10px; margin-top: 4px; }
+    .social-btn { width: 36px; height: 36px; background: transparent; border: 1px solid #E0DDD7; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; transition: all 0.2s; color: var(--text-dark); }
+    .social-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .social-btn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .footer-bottom { border-top: var(--section-divider); padding: 28px 0; text-align: center; color: #B0ACA6; font-size: 0.75rem; font-weight: 300; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
-      .exp-grid { grid-template-columns: repeat(2, 1fr); }
+      .exp-grid { grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
+      .global-grid { gap: 64px; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-content { padding: 60px 0; }
-      .about-grid, .global-grid { grid-template-columns: 1fr; gap: 32px; }
-      .services-grid, .segments-grid, .logos-grid { grid-template-columns: 1fr; }
+      .about-grid, .global-grid { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid, .segments-grid { grid-template-columns: 1fr; }
       .videos-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px; }
+      .trust-item { border-right: none; border-bottom: var(--section-divider); padding-bottom: 16px; }
       .trust-item:last-child { border-bottom: none; }
+      .footer-bottom { justify-content: center; }
     }
     @media (max-width: 480px) {
       .trust-grid { grid-template-columns: 1fr; }
       .exp-grid { grid-template-columns: 1fr; }
-      .hero-btns { flex-direction: column; }
     }
   </style>
 </head>
@@ -201,7 +254,7 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#industry-segments">Industry Segments</a></li>
+        <li><a href="#" onclick="showIndustrySegmentsPage(); return false;">Industry Segments</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#videos">Videos</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -214,25 +267,27 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#home" onclick="closeMenu()">Home</a>
     <a href="#about" onclick="closeMenu()">About</a>
-    <a href="#industry-segments" onclick="closeMenu()">Industry Segments</a>
+    <a href="#" onclick="showIndustrySegmentsPage(); closeMenu(); return false;">Industry Segments</a>
     <a href="#services" onclick="closeMenu()">Services</a>
     <a href="#videos" onclick="closeMenu()">Videos</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO: Split layout -->
 <section id="home">
-  <div class="hero-overlay"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">34+ Years Industry Leadership Experience</div>
-      <h1 class="hero-title">Construction Chemicals Manufacturing Consultancy</h1>
-      <p class="hero-subheadline">Plant Setup &nbsp;|&nbsp; Production Stabilisation &nbsp;|&nbsp; First Commercial Dispatch</p>
-      <p class="hero-body">Advisory services for promoters, investors and manufacturers in the construction chemicals industry.</p>
-      <div class="hero-btns">
-        <a href="#services" class="btn btn-primary">Explore Advisory Services</a>
-        <a href="#videos" class="btn btn-outline">Watch Industry Videos</a>
+  <div class="hero-split">
+    <div class="hero-image-side">
+      <img src="/assets/generated/hero-consultancy-plant.dim_1600x900.jpg" alt="Wide-angle construction chemicals manufacturing plant" />
+    </div>
+    <div class="hero-text-side">
+      <div class="hero-text-inner">
+        <div class="hero-eyebrow">International Consultancy</div>
+        <h1 class="hero-title">Construction Chemicals<br>Manufacturing &amp; Project Setup Advisor</h1>
+        <p class="hero-subheadline">Plant Setup &nbsp;|&nbsp; Production Stabilisation &nbsp;|&nbsp; First Commercial Dispatch</p>
+        <hr class="hero-divider" />
+        <div class="hero-badge">34+ Years Industry Leadership Experience</div>
+        <p class="hero-body">Advisory services for promoters, investors and manufacturers in the construction chemicals industry.</p>
       </div>
     </div>
   </div>
@@ -244,19 +299,19 @@
     <div class="trust-grid">
       <div class="trust-item">
         <div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
-        <div class="trust-text"><strong>34+ Years</strong><span>Industry Experience</span></div>
+        <div class="trust-text">34+ Years Industry Experience</div>
       </div>
       <div class="trust-item">
         <div class="trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
-        <div class="trust-text"><strong>Manufacturing Leadership</strong><span>Industry Expertise</span></div>
+        <div class="trust-text">Manufacturing Leadership Expertise</div>
       </div>
       <div class="trust-item">
         <div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <div class="trust-text"><strong>Global Reach</strong><span>Consultancy Support</span></div>
+        <div class="trust-text">Global Consultancy Support</div>
       </div>
       <div class="trust-item">
         <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
-        <div class="trust-text"><strong>Industry Specialists</strong><span>Construction Chemicals</span></div>
+        <div class="trust-text">Construction Chemical Industry Specialists</div>
       </div>
     </div>
   </div>
@@ -267,16 +322,16 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-image">
-        <img src="/assets/generated/about-plant.dim_800x600.jpg" alt="Tile adhesive and wall putty manufacturing plant facility" loading="lazy" />
+        <img src="/assets/generated/about-tileadhesive-plant.dim_800x600.jpg" alt="Tile adhesive and wall putty manufacturing plant facility" loading="lazy" />
       </div>
       <div class="about-text">
         <div class="section-label">About Us</div>
         <h2 class="section-title">About Golden Inning</h2>
-        <div class="title-underline"></div>
+        <div class="title-divider"></div>
         <p>Golden Inning is an independent professional consultancy led by <strong>Devraj Gohil</strong>, offering expert advisory services across construction chemical manufacturing &mdash; from dry mix plants and tile adhesive facilities to wall putty and waterproofing production setups.</p>
         <p>With over 34 years of manufacturing and industry leadership experience, the consultancy provides strategic, neutral, and independent guidance to promoters, investors and manufacturers seeking to establish or grow construction chemical manufacturing operations.</p>
-        <p style="font-size:0.9rem;">The advisory focus spans plant setup, production stabilisation, product portfolio development and business strategy &mdash; always aligned with the client's specific goals and market context.</p>
-        <a href="#contact" class="btn btn-outline-dark" style="margin-top:24px;">Enquire About Advisory Services</a>
+        <p>The advisory focus spans plant setup, production stabilisation, product portfolio development and business strategy &mdash; always aligned with the client's specific goals and market context.</p>
+        <a href="#contact" class="btn btn-outline-dark" style="margin-top:28px;">Enquire About Advisory Services</a>
       </div>
     </div>
   </div>
@@ -288,7 +343,6 @@
     <div class="exp-header">
       <div class="section-label" style="text-align:center;">Why Golden Inning</div>
       <h2 class="section-title" style="text-align:center;">Industry Experience Snapshot</h2>
-      <div class="title-underline centered"></div>
     </div>
     <div class="exp-grid">
       <div class="exp-card">
@@ -321,7 +375,7 @@
     <div class="services-header">
       <div class="section-label" style="text-align:center;">What We Offer</div>
       <h2 class="section-title" style="text-align:center;">Core Consultancy Services</h2>
-      <div class="title-underline centered"></div>
+      <div class="title-divider centered"></div>
     </div>
     <div class="services-grid">
       <div class="service-card">
@@ -354,45 +408,44 @@
     <div class="segments-header">
       <div class="section-label" style="text-align:center;">Advisory Coverage</div>
       <h2 class="section-title" style="text-align:center;">Industry Segments We Advise On</h2>
-      <p class="section-sub centered" style="margin-bottom:0;">Independent advisory across three distinct construction chemical manufacturing categories.</p>
-      <div class="title-underline centered"></div>
+      <p class="section-sub centered">Independent advisory across three distinct construction chemical manufacturing categories.</p>
+      <div class="title-divider centered"></div>
     </div>
     <div class="segments-grid">
       <div class="segment-card">
-        <div class="segment-icon-wrap"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/></svg></div>
+        <div class="segment-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/></svg></div>
         <div class="segment-title">Dry Mix Construction Chemicals</div>
         <p class="segment-desc">Advisory for manufacturers and investors establishing dry mix production &mdash; covering tile adhesives, wall putty, tile grouts and repair mortars.</p>
         <div class="segment-divider"></div>
         <ul class="segment-list">
-          <li><span class="seg-dot"></span>Tile Adhesives</li>
-          <li><span class="seg-dot"></span>Wall Putty</li>
-          <li><span class="seg-dot"></span>Tile Grouts</li>
-          <li><span class="seg-dot"></span>Repair Mortars</li>
-          <li><span class="seg-dot"></span>Skim Coat</li>
+          <li><span class="seg-dot"></span><a href="./tile-adhesives.html" class="segment-link">Tile Adhesives</a></li>
+          <li><span class="seg-dot"></span><a href="./tile-grouts.html" class="segment-link">Tile Grouts</a></li>
+          <li><span class="seg-dot"></span><a href="./skim-coat-wall-putty.html" class="segment-link">Skim Coat / Wall Putty</a></li>
+          <li><span class="seg-dot"></span><a href="./repair-mortars.html" class="segment-link">Repair Mortars</a></li>
         </ul>
       </div>
       <div class="segment-card">
-        <div class="segment-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="segment-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
         <div class="segment-title">Waterproofing Systems</div>
         <p class="segment-desc">Consultancy for setting up waterproofing product manufacturing &mdash; cementitious systems, acrylic coatings and PU-based protective solutions.</p>
         <div class="segment-divider"></div>
         <ul class="segment-list">
-          <li><span class="seg-dot"></span>Cementitious Waterproofing</li>
-          <li><span class="seg-dot"></span>Acrylic Coatings</li>
-          <li><span class="seg-dot"></span>PU Coatings</li>
-          <li><span class="seg-dot"></span>Bituminous Systems</li>
+          <li><span class="seg-dot"></span><a href="./cementitious-waterproofing.html" class="segment-link">Cementitious Waterproofing</a></li>
+          <li><span class="seg-dot"></span><a href="./acrylic-coatings.html" class="segment-link">Acrylic Coatings</a></li>
+          <li><span class="seg-dot"></span><a href="./pu-coatings.html" class="segment-link">PU Coatings</a></li>
+          <li><span class="seg-dot"></span><a href="./waterproofing-liquid.html" class="segment-link">Waterproofing Liquid</a></li>
         </ul>
       </div>
       <div class="segment-card">
-        <div class="segment-icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+        <div class="segment-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
         <div class="segment-title">Specialty Construction Chemicals</div>
         <p class="segment-desc">Expert guidance on specialty product manufacturing &mdash; epoxy systems, industrial flooring compounds and high-performance protective coatings.</p>
         <div class="segment-divider"></div>
         <ul class="segment-list">
-          <li><span class="seg-dot"></span>Epoxy Systems</li>
-          <li><span class="seg-dot"></span>Industrial Flooring</li>
-          <li><span class="seg-dot"></span>Protective Coatings</li>
-          <li><span class="seg-dot"></span>Admixtures</li>
+          <li><span class="seg-dot"></span><a href="./concrete-admixtures.html" class="segment-link">Concrete Admixtures</a></li>
+          <li><span class="seg-dot"></span><a href="./industrial-grouts.html" class="segment-link">Industrial Grouts</a></li>
+          <li><span class="seg-dot"></span><a href="./industrial-flooring.html" class="segment-link">Industrial Flooring</a></li>
+          <li><span class="seg-dot"></span><a href="./protective-coatings.html" class="segment-link">Protective Coatings</a></li>
         </ul>
       </div>
     </div>
@@ -406,12 +459,12 @@
       <div class="section-label" style="text-align:center;">Knowledge Hub</div>
       <h2 class="section-title" style="text-align:center;">Industry Knowledge Videos</h2>
       <p class="section-sub centered">Expert insights from Golden Inning &ndash; Chemicals for Construction</p>
-      <div class="title-underline centered"></div>
+      <div class="title-divider centered"></div>
     </div>
     <div class="videos-grid">
       <div class="video-block">
         <div class="video-wrap"><iframe src="https://www.youtube.com/embed/5OffxOciUMc" title="Construction Chemicals Manufacturing &mdash; Industry Insights" allowfullscreen loading="lazy"></iframe></div>
-        <div class="video-title">Construction Chemicals Manufacturing &mdash; Industry Insights</div>
+        <div class="video-title">Construction Chemicals Manufacturing &mdash; Industry Overview</div>
       </div>
       <div class="video-block">
         <div class="video-wrap"><iframe src="https://www.youtube.com/embed/TEcInVGMALU" title="Dry Mix Plant Setup &mdash; Advisory Insights" allowfullscreen loading="lazy"></iframe></div>
@@ -427,34 +480,46 @@
       </div>
     </div>
     <div class="videos-cta">
-      <a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="btn btn-primary">View All Videos on YouTube</a>
+      <a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="btn btn-outline-gold">
+        <svg style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View All Videos on YouTube
+      </a>
     </div>
   </div>
 </section>
-
-<!-- LOGO OPTIONS -->
 
 <!-- GLOBAL CONSULTANCY -->
 <section id="global">
   <div class="container">
     <div class="global-grid">
       <div class="global-content">
+        <div class="section-label">Our Reach</div>
         <h2 class="section-title">Global Consultancy Reach</h2>
-        <div class="title-underline" style="background:rgba(255,255,255,0.4)"></div>
-        <p>Golden Inning provides consultancy services for construction chemical manufacturing projects across regions worldwide, supporting promoters and investors at every stage of their journey.</p>
-        <div class="regions">
-          <span class="region-badge">India</span>
-          <span class="region-badge">Asia</span>
-          <span class="region-badge">Africa</span>
-          <span class="region-badge">GCC Countries</span>
-        </div>
+        <div class="title-divider"></div>
+        <p>Golden Inning provides consultancy services for construction chemical manufacturing projects across regions worldwide, delivering expert guidance from plant conception to first commercial dispatch.</p>
       </div>
       <div>
+        <div class="delivery-title">Regions Served</div>
+        <div class="regions">
+          <span class="region-badge"><span class="region-badge-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>India</span>
+          <span class="region-badge"><span class="region-badge-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Asia</span>
+          <span class="region-badge"><span class="region-badge-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Africa</span>
+          <span class="region-badge"><span class="region-badge-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>GCC Countries</span>
+        </div>
         <div class="delivery-title">Services Delivered Through</div>
         <ul class="delivery-list">
-          <li>Online Advisory</li>
-          <li>Project Consultation</li>
-          <li>Manufacturing Setup Guidance</li>
+          <li>
+            <span class="delivery-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+            Online Advisory
+          </li>
+          <li>
+            <span class="delivery-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            Project Consultation
+          </li>
+          <li>
+            <span class="delivery-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span>
+            Manufacturing Setup Guidance
+          </li>
         </ul>
       </div>
     </div>
@@ -465,15 +530,21 @@
 <section id="contact">
   <div class="container">
     <div class="contact-inner">
+      <div class="contact-icon-wrap">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
       <div class="section-label" style="text-align:center;">Reach Out</div>
       <h2 class="section-title" style="text-align:center;">Get In Touch</h2>
-      <div class="title-underline centered"></div>
-      <p style="color:var(--mid-grey);text-align:center;">For consultancy enquiries please contact:</p>
+      <div class="title-divider centered"></div>
+      <p style="color:var(--mid-grey);text-align:center;font-size:0.9rem;font-weight:300;">For consultancy enquiries please contact:</p>
       <div style="text-align:center;">
         <a href="mailto:devrajgohil@gmail.com" class="contact-email">devrajgohil@gmail.com</a>
       </div>
       <div style="text-align:center;">
-        <a href="mailto:devrajgohil@gmail.com" class="btn btn-primary">Send Email</a>
+        <a href="mailto:devrajgohil@gmail.com" class="btn btn-outline-gold">
+          <svg style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5;" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send Email
+        </a>
       </div>
     </div>
   </div>
@@ -484,13 +555,11 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div class="nav-logo-mark" style="background:var(--primary-light);">GI</div>
-          <div>
-            <div class="footer-brand-name">Golden Inning Consultancy</div>
-            <div class="footer-brand-sub">Construction Chemicals Manufacturing Advisory</div>
-          </div>
+        <div class="footer-logo-row">
+          <div class="footer-logo-mark">GI</div>
+          <div class="footer-brand-name">Golden Inning Consultancy</div>
         </div>
+        <div class="footer-brand-sub">Construction Chemicals Manufacturing Advisory</div>
       </div>
       <div>
         <div class="footer-col-title">Contact</div>
@@ -503,12 +572,15 @@
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
           <a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="social-btn" title="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="white" stroke="none"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="currentColor" stroke="none"/></svg>
           </a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Golden Inning Consultancy. All rights reserved.</div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Golden Inning Consultancy. All rights reserved.</span>
+      <a href="https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=golden-inning" target="_blank" rel="noopener" style="color:inherit;">Built with &#10084; using caffeine.ai</a>
+    </div>
   </div>
 </footer>
 
@@ -521,6 +593,364 @@
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
     });
   });
+</script>
+
+
+<!-- ===== INDUSTRY SEGMENTS PAGE ===== -->
+<div id="page-industry-segments" style="display:none;">
+  <div style="background:#fff; border-bottom:1px solid #EAEAEA; padding:96px 0 64px;">
+    <div class="container">
+      <nav style="margin-bottom:32px; display:flex; align-items:center; gap:8px;">
+        <a href="#" onclick="showHomePage(); return false;" style="font-size:0.75rem; font-weight:300; color:var(--primary);">Home</a>
+        <svg style="width:12px;height:12px;stroke:#9A9590;fill:none;stroke-width:2;" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span style="font-size:0.75rem; font-weight:300; color:#2B2B2B;">Industry Segments</span>
+      </nav>
+      <div class="section-label">Our Coverage</div>
+      <h1 class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);">Industry Segments</h1>
+      <p class="section-sub" style="margin-top:8px;">Explore our construction chemical manufacturing advisory coverage across three distinct segments.</p>
+    </div>
+  </div>
+  <div style="background:#FAFAFA; border-top:1px solid #EAEAEA; padding:96px 0;">
+    <div class="container">
+      <div id="segments-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:48px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CATEGORY PAGE ===== -->
+<style>
+  .cat-sidebar { width:100%; flex-shrink:0; background:#fff; border-bottom:1px solid #EAEAEA; padding:48px 0; }
+  @media (min-width:1024px) { .cat-sidebar { width:240px; border-bottom:none; border-right:1px solid #EAEAEA; padding:48px 0; position:sticky; top:0; align-self:flex-start; } }
+</style>
+<div id="page-category" style="display:none;">
+  <div style="background:#fff; border-bottom:1px solid #EAEAEA; padding:96px 0 64px;">
+    <div class="container">
+      <nav id="cat-breadcrumb" style="margin-bottom:32px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;"></nav>
+      <div id="cat-eyebrow" class="section-label"></div>
+      <h1 id="cat-title" class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);"></h1>
+      <p id="cat-sub" class="section-sub" style="margin-top:8px;">Select a category from the left to explore the product range and advisory coverage.</p>
+    </div>
+  </div>
+  <div style="background:#FAFAFA; border-top:1px solid #EAEAEA;">
+    <div class="container">
+      <div style="display:flex; flex-direction:column; min-height:70vh;" class="cat-layout-wrapper">
+        <!-- LEFT SIDEBAR -->
+        <aside class="cat-sidebar">
+          <div id="cat-sidebar-inner" style="padding-right:0;"></div>
+        </aside>
+        <!-- RIGHT PANEL -->
+        <div id="cat-right-panel" style="flex:1; min-width:0; padding:48px 0;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT DETAIL PAGE ===== -->
+<div id="page-product" style="display:none;">
+  <div style="background:#fff; border-bottom:1px solid #EAEAEA; padding:96px 0 64px;">
+    <div class="container">
+      <nav id="prod-breadcrumb" style="margin-bottom:32px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;"></nav>
+      <div id="prod-eyebrow" class="section-label"></div>
+      <h1 id="prod-title" class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);"></h1>
+      <p id="prod-desc" class="section-sub" style="margin-top:8px; max-width:640px;"></p>
+    </div>
+  </div>
+  <div style="background:#FAFAFA; border-top:1px solid #EAEAEA; padding:64px 0;">
+    <div class="container">
+      <div style="margin-bottom:48px;">
+        <div class="section-label">Range</div>
+        <h2 class="section-title" style="font-size:1.4rem;">Products in this Category</h2>
+      </div>
+      <div id="prod-list" style="max-width:720px;"></div>
+    </div>
+  </div>
+  <div style="background:#fff; border-top:1px solid #EAEAEA; padding:96px 0;">
+    <div class="container">
+      <div style="max-width:480px; margin:0 auto; text-align:center;">
+        <div class="section-label" style="text-align:center;">Consultancy Advisory</div>
+        <h2 class="section-title" style="text-align:center; font-size:clamp(1.3rem,2.5vw,1.8rem);">Ready to set up manufacturing for this product range?</h2>
+        <p style="color:var(--mid-grey); font-size:0.875rem; font-weight:300; margin:16px 0 40px; line-height:1.9;">Our consultancy advisory covers plant setup, formulation development and production stabilisation.</p>
+        <a href="mailto:devrajgohil@gmail.com" class="btn btn-outline-gold">
+          <svg style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5;" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Request Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var industryData = [
+  { slug:"dry-mix-construction-chemicals", title:"Dry Mix Construction Chemicals", categories:[
+    { slug:"tile-adhesives", title:"Tile Adhesives", description:"Cement-based adhesives used for fixing tiles on floors and walls across residential and commercial applications.", products:[
+      {name:"C1 – Standard Tile Adhesive", description:"General purpose adhesive used for installation of ceramic tiles on floors and walls."},
+      {name:"C1T – Non-Slip Tile Adhesive", description:"Improved vertical slip resistance suitable for wall tile installation."},
+      {name:"C2TE – High Performance Tile Adhesive", description:"Extended open-time adhesive designed for large format tiles and demanding site conditions."},
+      {name:"C2TES1 – Flexible Tile Adhesive", description:"High performance adhesive with flexibility suitable for temperature variation and complex substrates."},
+      {name:"Glass Mosaic Adhesive", description:"Flexible, high performance, polymer modified white adhesive used for glass mosaic and glass tiles."},
+      {name:"AAC Block Joint Mortar", description:"High-strength adhesive for quick and firm laying of AAC blocks with thin joints."}
+    ]},
+    { slug:"tile-grouts", title:"Tile Grouts", description:"Materials used for filling joints between tiles, providing strength, sealing and aesthetic finish.", products:[
+      {name:"Fine Grouts", description:"Fine-grain cementitious grout for narrow joints providing a smooth and clean finish."},
+      {name:"Sanded Grouts", description:"Sand-filled grout suitable for wider tile joints in floor and wall applications."},
+      {name:"Epoxy Grouts", description:"High-durability, chemical-resistant grout for demanding industrial and commercial environments."}
+    ]},
+    { slug:"skim-coat-wall-putty", title:"Skim Coat / Wall Putty", description:"Surface finishing materials used to smoothen walls and improve paint adhesion.", products:[
+      {name:"Coarse Putty", description:"Base coat putty for filling surface irregularities and preparing walls for final finishing."},
+      {name:"Fine Wall Putty", description:"Smooth finishing putty applied as a top coat to achieve a refined, paint-ready surface."},
+      {name:"Waterproofing Wall Putty", description:"Putty with waterproofing additives for moisture-prone interior walls."},
+      {name:"Polymer Plaster", description:"Polymer-modified plaster providing excellent adhesion and crack resistance on wall surfaces."},
+      {name:"Crack Filler Powder", description:"Ready-to-mix powder for filling hairline cracks and surface defects prior to painting."}
+    ]},
+    { slug:"repair-mortars", title:"Repair Mortars", description:"Specialized materials used for repair, restoration and strengthening of damaged concrete structures.", products:[
+      {name:"Repair & Rehabilitation Systems", description:"Comprehensive system for structural repair of deteriorated concrete elements and infrastructure."},
+      {name:"Micro Concrete – Ready-to-use Repair Mortar", description:"Flowable, high-strength micro concrete for deep section repairs and reinstatement of concrete structures."}
+    ]}
+  ]},
+  { slug:"waterproofing-systems", title:"Waterproofing Systems", categories:[
+    { slug:"cementitious-waterproofing", title:"Cementitious Waterproofing", description:"Two-component or single-component systems used for protecting concrete structures from water ingress.", products:[
+      {name:"2K Elastomeric Cementitious Waterproofing Coating", description:"Flexible two-component system providing durable waterproofing for basements, tanks and terraces."},
+      {name:"2K High-Flex Waterproofing Coating", description:"High-flexibility two-component coating designed for structures subject to movement and thermal cycling."},
+      {name:"Primer for 2K Waterproofing Systems", description:"Surface primer to improve adhesion of cementitious waterproofing coatings on concrete and masonry substrates."}
+    ]},
+    { slug:"acrylic-coatings", title:"Acrylic Coatings", description:"Acrylic-based elastomeric coatings providing flexible waterproofing protection for walls and terraces.", products:[
+      {name:"1K Acrylic Elastomeric Wall Coat", description:"Single-component acrylic coating offering flexible waterproofing and aesthetic finish for exterior walls."},
+      {name:"1K Fibre-Reinforced Terrace Coat", description:"Fibre-reinforced single-component coating for terrace waterproofing with improved crack-bridging capability."}
+    ]},
+    { slug:"pu-coatings", title:"PU Coatings", description:"Polyurethane-based waterproofing coatings providing high flexibility and chemical resistance.", products:[
+      {name:"1K PU Waterproofing Coat (Wall & Terrace)", description:"Single-component polyurethane coating for seamless waterproofing of walls and terrace surfaces."}
+    ]},
+    { slug:"waterproofing-liquid", title:"Waterproofing Liquid", description:"Liquid-based waterproofing compounds and admixtures for integral and surface waterproofing applications.", products:[
+      {name:"Integral Waterproofing Compound", description:"Crystalline-type admixture added to concrete mix to provide integral waterproofing protection."},
+      {name:"SBR Latex", description:"Styrene-butadiene rubber latex used as a bonding agent and waterproofing additive in cement-based applications."},
+      {name:"Premium Latex Waterproofing Agent", description:"High-performance latex admixture for enhancing waterproofing and bonding properties of mortars."},
+      {name:"Acrylic Polymer Waterproofing Solution", description:"Acrylic polymer solution for improving flexibility, adhesion and waterproofing of cement-based coatings."},
+      {name:"Water Repellent", description:"Silicone-based surface treatment providing water-repellent properties to concrete and masonry surfaces."}
+    ]}
+  ]},
+  { slug:"specialty-construction-chemicals", title:"Specialty Construction Chemicals", categories:[
+    { slug:"concrete-admixtures", title:"Concrete Admixtures", description:"Chemical admixtures used to modify concrete properties for improved workability, strength and durability.", products:[
+      {name:"High Early Strength Super Plasticiser", description:"Naphthalene-based super plasticiser achieving high early strength gain in concrete mixes."},
+      {name:"Retarding Plasticiser", description:"Retarding admixture extending concrete setting time for large pours and hot-weather concreting."},
+      {name:"High-performance Plasticiser", description:"Lignosulfonate-based plasticiser improving workability and reducing water demand in concrete."},
+      {name:"PCE-based Retarding Super Plasticiser", description:"Polycarboxylate ether super plasticiser with retarding action for high-performance concrete and precast applications."}
+    ]},
+    { slug:"industrial-grouts", title:"Industrial Grouts", description:"High-strength grouting materials for machine bases, column bases and structural gap filling.", products:[
+      {name:"Non-Shrink Grout", description:"Cementitious non-shrink grout for precision grouting of machinery bases and structural connections."},
+      {name:"Epoxy Grout", description:"Three-component epoxy system for chemical-resistant and high-load-bearing grouting applications."}
+    ]},
+    { slug:"industrial-flooring", title:"Industrial Flooring", description:"Flooring systems and compounds for high-traffic industrial and commercial floor surfaces.", products:[
+      {name:"Industrial Floor Hardener", description:"Dry shake floor hardener applied to fresh concrete to provide an abrasion-resistant floor surface."},
+      {name:"Self-Leveling Mortar", description:"Pourable self-leveling compound for producing smooth, level floor surfaces in industrial and commercial areas."}
+    ]},
+    { slug:"protective-coatings", title:"Protective Coatings", description:"Coating systems for surface protection, waterproofing and aesthetic enhancement of concrete and masonry.", products:[
+      {name:"Efflorescence-Resistant Waterproof Primer", description:"Primer designed to prevent efflorescence and provide a waterproof base coat on masonry surfaces."},
+      {name:"Eco Primer", description:"Environmentally compatible primer for improving paint and coating adhesion on interior and exterior surfaces."},
+      {name:"Fibre-Reinforced Crack Filler Paste", description:"Ready-to-use fibre-reinforced paste for filling and bridging cracks on external walls and surfaces."},
+      {name:"Transparent Polymer Waterproofing", description:"Clear polymer coating providing invisible waterproofing protection for concrete and stone surfaces."}
+    ]}
+  ]}
+];
+
+var homepageSections = ['home','trust-strip','about','experience-snapshot','services','industry-segments','videos','global','contact'];
+
+function getHomeIds() {
+  return ['home','trust-strip','about','experience-snapshot','services','industry-segments','videos','global','contact'];
+}
+
+function showHomePage() {
+  document.querySelectorAll('#page-industry-segments,#page-category,#page-product').forEach(function(el){ el.style.display='none'; });
+  getHomeIds().forEach(function(id){ var el=document.getElementById(id); if(el) el.style.display=''; });
+  document.querySelector('footer').style.display='';
+  window.scrollTo(0,0);
+}
+
+function hideAllPages() {
+  getHomeIds().forEach(function(id){ var el=document.getElementById(id); if(el) el.style.display='none'; });
+  document.querySelectorAll('#page-industry-segments,#page-category,#page-product').forEach(function(el){ el.style.display='none'; });
+}
+
+function chevronSVG() {
+  return '<svg style="width:12px;height:12px;stroke:#9A9590;fill:none;stroke-width:2;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>';
+}
+
+function breadcrumbLink(label, onclick) {
+  return '<a href="#" onclick="'+onclick+'; return false;" style="font-size:0.75rem;font-weight:300;color:var(--primary);">'+label+'</a>';
+}
+
+var SEGMENT_IMAGES = {
+  "dry-mix-construction-chemicals": "/assets/generated/segment-dry-mix.dim_800x500.jpg",
+  "waterproofing-systems": "/assets/generated/segment-waterproofing.dim_800x500.jpg",
+  "specialty-construction-chemicals": "/assets/generated/segment-specialty.dim_800x500.jpg"
+};
+
+var CATEGORY_IMAGES = {
+  "tile-adhesives": "/assets/generated/cat-dry-mix.dim_800x500.jpg",
+  "tile-grouts": "/assets/generated/cat-dry-mix.dim_800x500.jpg",
+  "skim-coat-wall-putty": "/assets/generated/cat-dry-mix.dim_800x500.jpg",
+  "repair-mortars": "/assets/generated/cat-dry-mix.dim_800x500.jpg",
+  "cementitious-waterproofing": "/assets/generated/cat-waterproofing.dim_800x500.jpg",
+  "acrylic-coatings": "/assets/generated/cat-waterproofing.dim_800x500.jpg",
+  "pu-coatings": "/assets/generated/cat-waterproofing.dim_800x500.jpg",
+  "waterproofing-liquid": "/assets/generated/cat-waterproofing.dim_800x500.jpg",
+  "concrete-admixtures": "/assets/generated/cat-specialty.dim_800x500.jpg",
+  "industrial-grouts": "/assets/generated/cat-specialty.dim_800x500.jpg",
+  "industrial-flooring": "/assets/generated/cat-specialty.dim_800x500.jpg",
+  "protective-coatings": "/assets/generated/cat-specialty.dim_800x500.jpg"
+};
+
+function showIndustrySegmentsPage() {
+  hideAllPages();
+  document.querySelector('footer').style.display='';
+  var grid = document.getElementById('segments-grid');
+  grid.innerHTML = '';
+  industryData.forEach(function(seg) {
+    var catLinks = seg.categories.map(function(cat) {
+      return '<a href="#" onclick="showCategoryPage(''+seg.slug+''); return false;" style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;color:#2B2B2B;font-size:0.8125rem;font-weight:300;transition:color 0.2s;" onmouseover="this.style.color='#B8956A'" onmouseout="this.style.color='#2B2B2B'">'
+        + '<span>'+cat.title+'</span>'
+        + '<svg style="width:12px;height:12px;stroke:#B8956A;fill:none;stroke-width:1.5;opacity:0.6;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>'
+        + '</a>';
+    }).join('');
+    var imgSrc = SEGMENT_IMAGES[seg.slug] || '';
+    var card = document.createElement('div');
+    card.style.cssText = 'background:#fff;border:1px solid #EAEAEA;overflow:hidden;';
+    card.innerHTML = (imgSrc ? '<a href="#" onclick="showCategoryPage(''+seg.slug+''); return false;" style="display:block;overflow:hidden;"><img src="'+imgSrc+'" alt="'+seg.title+'" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;filter:brightness(0.92) contrast(0.97);transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/></a>' : '')
+      + '<div style="padding:1.5rem;">'
+      + '<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">'
+      + '<svg style="width:20px;height:20px;stroke:#B8956A;fill:none;stroke-width:1.5;" viewBox="0 0 24 24"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/></svg>'
+      + '<h2 style="font-size:1rem;font-weight:600;color:#2B2B2B;line-height:1.3;">'+seg.title+'</h2>'
+      + '</div>'
+      + '<div style="border-top:1px solid #EAEAEA;padding-top:1rem;">' + catLinks + '</div>'
+      + '</div>';
+    grid.appendChild(card);
+  });
+  document.getElementById('page-industry-segments').style.display='block';
+  window.scrollTo(0,0);
+}
+
+function renderCatRightPanel(segment, selectedSlug) {
+  var panel = document.getElementById('cat-right-panel');
+  if (selectedSlug) {
+    var cat = segment.categories.find(function(c){ return c.slug===selectedSlug; });
+    if (!cat) return;
+    var imgFallback = CATEGORY_IMAGES[cat.slug] || '/assets/generated/cat-dry-mix.dim_800x500.jpg';
+    var productsHTML = cat.products.map(function(p, pi) {
+      var imgSrc = p.image || imgFallback;
+      return '<div style="background:#fff;border:1px solid #EAEAEA;overflow:hidden;">'
+        + '<div style="aspect-ratio:16/10;overflow:hidden;"><img src="'+imgSrc+'" alt="'+p.name+'" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.93);"/></div>'
+        + '<div style="padding:1.25rem;">'
+        + '<h3 style="font-size:0.875rem;font-weight:600;color:#1A1A1A;margin-bottom:8px;">'+p.name+'</h3>'
+        + '<p style="font-size:0.75rem;font-weight:300;color:#6B6560;line-height:1.7;">'+p.description+'</p>'
+        + '</div></div>';
+    }).join('');
+    panel.innerHTML = '<div style="padding-left:0;" class="cat-right-inner">'
+      + '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:32px;">'
+      + '<div><p style="font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#B8956A;margin-bottom:8px;">'+cat.title+'</p>'
+      + '<h2 style="font-size:1.5rem;font-weight:600;color:#1A1A1A;margin-bottom:12px;">'+cat.title+'</h2>'
+      + '<p style="font-size:0.875rem;font-weight:300;color:#6B6560;line-height:1.9;max-width:480px;">'+cat.description+'</p></div>'
+      + '<button onclick="renderCatRightPanel(window._currentCatSegment, null); updateCatSidebar(window._currentCatSegment, null);" style="display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;font-weight:300;color:#6B6560;background:none;border:1px solid #EAEAEA;border-radius:4px;padding:6px 12px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all 0.2s;" onmouseover="this.style.color='#B8956A';this.style.borderColor='#B8956A';" onmouseout="this.style.color='#6B6560';this.style.borderColor='#EAEAEA';">'
+      + '<svg style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> All categories</button>'
+      + '</div>'
+      + '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;">'
+      + productsHTML + '</div>'
+      + '<div style="margin-top:3rem;padding-top:2.5rem;border-top:1px solid #EAEAEA;text-align:center;">'
+      + '<h3 style="font-size:1.1rem;font-weight:600;color:#1A1A1A;margin-bottom:12px;">Ready to set up manufacturing for this product range?</h3>'
+      + '<p style="font-size:0.875rem;font-weight:300;color:#6B6560;line-height:1.9;margin-bottom:24px;">Get in touch with our advisory team to discuss plant setup, production stabilisation, and first commercial dispatch.</p>'
+      + '<a href="mailto:devrajgohil@gmail.com" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;border:1px solid #B8956A;border-radius:4px;color:#B8956A;font-size:0.8125rem;font-weight:500;text-decoration:none;letter-spacing:0.05em;transition:all 0.2s;" onmouseover="this.style.background='#B8956A';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='#B8956A';">Request Consultation</a>'
+      + '</div></div>';
+  } else {
+    var summaryHTML = segment.categories.map(function(cat, ci) {
+      var pillsHTML = cat.products.map(function(p) {
+        return '<li style="font-size:0.75rem;font-weight:300;color:#2B2B2B;background:#F5F3EF;padding:4px 10px;border-radius:2px;list-style:none;">'+p.name+'</li>';
+      }).join('');
+      return '<div style="padding-top:'+(ci===0?'0':'2.5rem')+';padding-bottom:2.5rem;border-bottom:1px solid #EAEAEA;">'
+        + '<h3 style="font-size:1.0625rem;font-weight:600;color:#1A1A1A;margin-bottom:8px;">'+cat.title+'</h3>'
+        + '<p style="font-size:0.875rem;font-weight:300;color:#6B6560;line-height:1.9;margin-bottom:16px;max-width:480px;">'+cat.description+'</p>'
+        + '<ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px 0;padding:0;">' + pillsHTML + '</ul>'
+        + '<button onclick="renderCatRightPanel(window._currentCatSegment,''+cat.slug+''); updateCatSidebar(window._currentCatSegment,''+cat.slug+'');" style="display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;font-weight:500;color:#B8956A;background:none;border:none;padding:0;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7';" onmouseout="this.style.opacity='1';">Explore <svg style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>'
+        + '</div>';
+    }).join('');
+    panel.innerHTML = '<div class="cat-right-inner">'
+      + '<h2 style="font-size:1.125rem;font-weight:600;color:#1A1A1A;margin-bottom:32px;">All Categories in '+segment.title+'</h2>'
+      + summaryHTML + '</div>';
+  }
+}
+
+function updateCatSidebar(segment, selectedSlug) {
+  var inner = document.getElementById('cat-sidebar-inner');
+  var navBtns = segment.categories.map(function(cat, i) {
+    var isActive = cat.slug === selectedSlug;
+    return '<button onclick="renderCatRightPanel(window._currentCatSegment,''+cat.slug+''); updateCatSidebar(window._currentCatSegment,''+cat.slug+'');" style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:10px 12px;background:'+(isActive?'rgba(184,149,106,0.06)':'transparent')+';border:none;border-left:'+(isActive?'3px solid #B8956A':'3px solid transparent')+';cursor:pointer;text-align:left;border-radius:0 4px 4px 0;transition:all 0.2s;color:'+(isActive?'#B8956A':'#2B2B2B')+';font-weight:'+(isActive?500:300)+';font-size:0.875rem;" onmouseover="if(!this.classList.contains('active')){this.style.color='#B8956A';this.style.background='rgba(184,149,106,0.04)';}" onmouseout="if(!this.classList.contains('active')){this.style.color=''+(isActive?'#B8956A':'#2B2B2B')+'';this.style.background=''+(isActive?'rgba(184,149,106,0.06)':'transparent')+'';}">'
+      + '<span>'+cat.title+'</span>'
+      + (isActive ? '<svg style="width:14px;height:14px;stroke:#B8956A;fill:none;stroke-width:2;flex-shrink:0;" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>' : '')
+      + '</button>';
+  }).join('');
+  inner.innerHTML = '<p style="font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#B8956A;margin-bottom:24px;">Categories</p>'
+    + '<nav style="display:flex;flex-direction:column;gap:2px;">' + navBtns + '</nav>'
+    + '<div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #EAEAEA;">'
+    + '<a href="#" onclick="showIndustrySegmentsPage(); return false;" style="display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;font-weight:300;color:#6B6560;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#B8956A';" onmouseout="this.style.color='#6B6560';">'
+    + '<svg style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg> Back to Segments</a>'
+    + '</div>';
+}
+
+function showCategoryPage(segmentSlug) {
+  var segment = industryData.find(function(s){ return s.slug===segmentSlug; });
+  if (!segment) return;
+  window._currentCatSegment = segment;
+  hideAllPages();
+  document.querySelector('footer').style.display='';
+  document.getElementById('cat-eyebrow').textContent = 'Industry Segment';
+  document.getElementById('cat-title').textContent = segment.title;
+  document.getElementById('cat-breadcrumb').innerHTML =
+    breadcrumbLink('Home','showHomePage()') + chevronSVG() +
+    breadcrumbLink('Industry Segments','showIndustrySegmentsPage()') + chevronSVG() +
+    '<span style="font-size:0.75rem;font-weight:300;color:#2B2B2B;">'+segment.title+'</span>';
+  // Apply lg layout style
+  var wrapper = document.querySelector('.cat-layout-wrapper');
+  if (wrapper) { wrapper.style.flexDirection = window.innerWidth >= 1024 ? 'row' : 'column'; }
+  updateCatSidebar(segment, null);
+  renderCatRightPanel(segment, null);
+  document.getElementById('page-category').style.display='block';
+  window.scrollTo(0,0);
+}
+
+function showProductDetailPage(segmentSlug, categorySlug) {
+  var segment = industryData.find(function(s){ return s.slug===segmentSlug; });
+  if (!segment) return;
+  var category = segment.categories.find(function(c){ return c.slug===categorySlug; });
+  if (!category) return;
+  hideAllPages();
+  document.querySelector('footer').style.display='';
+  document.getElementById('prod-eyebrow').textContent = segment.title;
+  document.getElementById('prod-title').textContent = category.title;
+  document.getElementById('prod-desc').textContent = category.description;
+  document.getElementById('prod-breadcrumb').innerHTML =
+    breadcrumbLink('Home','showHomePage()') + chevronSVG() +
+    breadcrumbLink('Industry Segments','showIndustrySegmentsPage()') + chevronSVG() +
+    breadcrumbLink(segment.title,'showCategoryPage("'+segmentSlug+'")') + chevronSVG() +
+    '<span style="font-size:0.75rem;font-weight:300;color:#2B2B2B;">'+category.title+'</span>';
+  var list = document.getElementById('prod-list');
+  list.innerHTML = '';
+  category.products.forEach(function(prod) {
+    var item = document.createElement('div');
+    item.style.cssText = 'padding:28px 0;border-bottom:1px solid #EAEAEA;';
+    item.innerHTML = '<div style="border-left:2px solid rgba(184,149,106,0.4);padding-left:1rem;">'
+      + '<p style="font-size:1rem;font-weight:600;color:#2B2B2B;margin-bottom:6px;">'+prod.name+'</p>'
+      + '<p style="font-size:0.875rem;font-weight:300;color:#6B6560;line-height:1.9;">'+prod.description+'</p>'
+      + '</div>';
+    list.appendChild(item);
+  });
+  document.getElementById('page-product').style.display='block';
+  window.scrollTo(0,0);
+}
+
+// Handle responsive layout for category page
+window.addEventListener('resize', function() {
+  var wrapper = document.querySelector('.cat-layout-wrapper');
+  if (wrapper && document.getElementById('page-category').style.display !== 'none') {
+    wrapper.style.flexDirection = window.innerWidth >= 1024 ? 'row' : 'column';
+  }
+});
 </script>
 
 </body>

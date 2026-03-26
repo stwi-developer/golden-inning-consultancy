@@ -1,118 +1,115 @@
-import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Hero() {
-  const scrollToServices = () => {
-    document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToVideos = () => {
-    document.querySelector("#videos")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div
-      className="relative min-h-screen flex items-center"
-      style={{
-        backgroundImage:
-          "url('/assets/generated/hero-drymix-plant.dim_1600x900.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      id="home"
+      className="flex flex-col lg:flex-row"
+      style={{ minHeight: "560px" }}
     >
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Left: Image — 45% width, with subtle L→R gradient overlay */}
       <div
-        className="absolute inset-0 opacity-25"
-        style={{
-          background:
-            "linear-gradient(to top, oklch(0.20 0.08 145) 0%, transparent 65%)",
-        }}
-      />
+        className="w-full lg:w-[45%] overflow-hidden"
+        style={{ minHeight: "320px", position: "relative" }}
+      >
+        <img
+          src="/assets/generated/hero-consultancy-plant.dim_1600x900.jpg"
+          alt="Wide-angle construction chemicals manufacturing plant"
+          className="w-full h-full object-cover"
+          style={{
+            minHeight: "320px",
+            display: "block",
+            filter: "brightness(0.90) saturate(0.78) contrast(0.95)",
+          }}
+        />
+        {/* Subtle warm gradient overlay: left warm tone → fully transparent right */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to right, rgba(200,169,106,0.18), rgba(200,169,106,0))",
+            pointerEvents: "none",
+          }}
+        />
+      </div>
 
-      <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
+      {/* Right: Text — open, spacious, vertically centred */}
+      <div className="w-full lg:w-[55%] flex items-center bg-white px-14 lg:px-24 py-24 lg:py-32">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl"
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="max-w-md w-full"
         >
-          {/* 1. Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="font-bricolage text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
+          {/* Eyebrow */}
+          <p
+            className="text-xs font-medium tracking-[0.15em] uppercase mb-8"
+            style={{ color: "oklch(0.58 0.10 68)" }}
           >
-            Construction Chemicals Manufacturing Consultancy
-          </motion.h1>
+            International Consultancy
+          </p>
 
-          {/* 2. Subline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-lg md:text-xl font-medium text-white/80 tracking-wide mb-5"
+          {/* Main Headline — 2 lines, slightly weighted */}
+          <h1
+            className="font-bricolage text-3xl lg:text-[2.4rem] font-[600] mb-8"
+            style={{
+              color: "#2B2B2B",
+              letterSpacing: "-0.01em",
+              lineHeight: "1.3",
+            }}
+          >
+            Construction Chemicals
+            <br />
+            Manufacturing &amp; Project Setup Advisor
+          </h1>
+
+          {/* Subline */}
+          <p
+            className="text-sm font-light tracking-normal mb-8"
+            style={{ color: "oklch(0.48 0.03 65)", lineHeight: "2" }}
           >
             Plant Setup&nbsp;&nbsp;|&nbsp;&nbsp;Production
             Stabilisation&nbsp;&nbsp;|&nbsp;&nbsp;First Commercial Dispatch
-          </motion.p>
+          </p>
 
-          {/* 3. Experience Badge */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-white text-sm font-medium mb-6"
-            style={{ backgroundColor: "oklch(0.32 0.08 145 / 0.9)" }}
+          {/* Thin gold rule */}
+          <hr
+            className="mb-8"
+            style={{
+              width: "48px",
+              border: "none",
+              borderTop: "1px solid #B8956A",
+              margin: "0 0 2rem 0",
+            }}
+          />
+
+          {/* Experience Badge — very light outline */}
+          <div
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-normal mb-8"
+            style={{
+              border: "1px solid rgba(184,149,106,0.3)",
+              color: "oklch(0.56 0.08 68)",
+              backgroundColor: "transparent",
+            }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
+            <span
+              className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+              style={{ backgroundColor: "oklch(0.64 0.09 68)" }}
+            />
             34+ Years Industry Leadership Experience
-          </motion.div>
+          </div>
 
-          {/* 4. Supporting Line */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.7 }}
-            className="text-base text-white/70 mb-10 max-w-lg"
+          {/* Supporting Line */}
+          <p
+            className="text-sm font-light"
+            style={{ color: "oklch(0.50 0.02 65)", lineHeight: "2" }}
           >
             Advisory services for promoters, investors and manufacturers in the
             construction chemicals industry.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.7 }}
-            className="flex flex-wrap gap-4"
-          >
-            <button
-              type="button"
-              data-ocid="hero.primary_button"
-              onClick={scrollToServices}
-              className="px-7 py-3.5 rounded font-semibold text-white text-sm transition-all hover:opacity-90 hover:shadow-lg active:scale-[0.98]"
-              style={{ backgroundColor: "oklch(0.32 0.08 145)" }}
-            >
-              Explore Advisory Services
-            </button>
-            <button
-              type="button"
-              data-ocid="hero.secondary_button"
-              onClick={scrollToVideos}
-              className="px-7 py-3.5 rounded font-semibold text-white text-sm border border-white/50 hover:bg-white/10 transition-all active:scale-[0.98]"
-            >
-              Watch Industry Videos
-            </button>
-          </motion.div>
+          </p>
         </motion.div>
       </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
-      >
-        <ChevronDown size={24} />
-      </motion.div>
     </div>
   );
 }
