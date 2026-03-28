@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
 const videos = [
@@ -79,22 +79,19 @@ export default function Videos() {
 
         {/* CTA */}
         <div className="text-center">
-          <a
-            data-ocid="videos.primary_button"
-            href="https://www.youtube.com/@GoldenInning"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/videos"
             className="inline-flex items-center gap-2 px-7 py-3 text-sm transition-all videos-cta-btn"
             style={{
               border: "1px solid #B8956A",
               color: "#B8956A",
               backgroundColor: "transparent",
               borderRadius: "6px",
+              textDecoration: "none",
             }}
           >
-            View All Videos on YouTube
-            <ExternalLink size={14} />
-          </a>
+            View All Videos
+          </Link>
           <style>
             {".videos-cta-btn:hover { background-color: #F5F0E8 !important; }"}
           </style>

@@ -67,7 +67,6 @@ export default function Navbar() {
     }
   };
 
-  // Nav items in required order: Home, About, Industry Segments, Services, Videos, Contact
   type ScrollNavItem = {
     type: "scroll";
     label: string;
@@ -77,6 +76,7 @@ export default function Navbar() {
   type LinkNavItem = { type: "link"; label: string; to: string; ocid: string };
   type NavItem = ScrollNavItem | LinkNavItem;
 
+  // Nav order: Home, About, Industry Segments, Services, Videos, Contact
   const navItems: NavItem[] = [
     { type: "scroll", label: "Home", hash: "#home", ocid: "nav.link.1" },
     { type: "scroll", label: "About", hash: "#about", ocid: "nav.link.2" },
@@ -92,7 +92,12 @@ export default function Navbar() {
       hash: "#services",
       ocid: "nav.link.4",
     },
-    { type: "scroll", label: "Videos", hash: "#videos", ocid: "nav.link.5" },
+    {
+      type: "link",
+      label: "Videos",
+      to: "/videos",
+      ocid: "nav.link.5",
+    },
     { type: "scroll", label: "Contact", hash: "#contact", ocid: "nav.link.6" },
   ];
 

@@ -19,6 +19,7 @@ import Videos from "./components/Videos";
 import CategoryPage from "./pages/CategoryPage";
 import IndustrySegmentsPage from "./pages/IndustrySegmentsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import VideosPage from "./pages/VideosPage";
 
 function HomePage() {
   return (
@@ -82,11 +83,18 @@ const productDetailRoute = createRoute({
   component: ProductDetailPage,
 });
 
+const videosRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/videos",
+  component: VideosPage,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   industrySegmentsRoute,
   categoryRoute,
   productDetailRoute,
+  videosRoute,
 ]);
 
 const router = createRouter({ routeTree });
