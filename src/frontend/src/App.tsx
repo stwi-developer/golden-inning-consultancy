@@ -18,8 +18,10 @@ import TrustStrip from "./components/TrustStrip";
 import Videos from "./components/Videos";
 import AboutPage from "./pages/AboutPage";
 import CategoryPage from "./pages/CategoryPage";
+import ContactPage from "./pages/ContactPage";
 import IndustrySegmentsPage from "./pages/IndustrySegmentsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import ServicesPage from "./pages/ServicesPage";
 import VideosPage from "./pages/VideosPage";
 
 function HomePage() {
@@ -96,6 +98,18 @@ const videosRoute = createRoute({
   component: VideosPage,
 });
 
+const servicesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/services",
+  component: ServicesPage,
+});
+
+const contactRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/contact",
+  component: ContactPage,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
@@ -103,6 +117,8 @@ const routeTree = rootRoute.addChildren([
   categoryRoute,
   productDetailRoute,
   videosRoute,
+  servicesRoute,
+  contactRoute,
 ]);
 
 const router = createRouter({ routeTree });

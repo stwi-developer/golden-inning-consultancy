@@ -87,9 +87,9 @@ export default function Navbar() {
       ocid: "nav.link.3",
     },
     {
-      type: "scroll",
+      type: "link",
       label: "Services",
-      hash: "#services",
+      to: "/services",
       ocid: "nav.link.4",
     },
     {
@@ -98,7 +98,12 @@ export default function Navbar() {
       to: "/videos",
       ocid: "nav.link.5",
     },
-    { type: "scroll", label: "Contact", hash: "#contact", ocid: "nav.link.6" },
+    {
+      type: "link",
+      label: "Contact",
+      to: "/contact",
+      ocid: "nav.link.6",
+    },
   ];
 
   return (

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.services-page-hero{padding:96px 0;background:#fff;border-bottom:var(--section-divider);}
+.service-section{padding:96px 0;}
+.service-section.white{background:#fff;border-bottom:var(--section-divider);}
+.service-section.grey{background:#FAFAFA;border-bottom:var(--section-divider);}
+.service-section.no-border{border-bottom:none;}
+.service-lead{font-size:.9rem;line-height:1.9;font-weight:300;color:#4B4540;max-width:640px;margin-bottom:32px;}
+.service-bullets{list-style:none;margin-top:32px;}
+.service-bullets li{display:flex;align-items:flex-start;gap:14px;padding:10px 0;font-size:.875rem;color:#4B4540;font-weight:300;line-height:1.75;}
+.service-bullets li+li{border-top:var(--section-divider);}
+.bullet-dot{width:6px;height:6px;border-radius:50%;background:#B8956A;flex-shrink:0;margin-top:7px;}
+.bullet-title{font-weight:500;color:#2B2B2B;}
+.highlight-card{margin-top:40px;padding:20px 24px;border-left:3px solid #B8956A;background:#FAF7F3;border-radius:0 4px 4px 0;max-width:560px;}
+.highlight-card p{font-size:.875rem;font-weight:300;line-height:1.7;color:#7A6040;font-style:italic;margin:0;}
+.engagement-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;position:relative;margin-top:56px;}
+.engagement-grid::before{content:'';position:absolute;top:19px;left:5%;right:5%;height:1px;background:#EAEAEA;z-index:0;}
+.eng-step{display:flex;flex-direction:column;align-items:flex-start;}
+.eng-circle{width:40px;height:40px;border-radius:50%;border:2px solid #B8956A;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;z-index:1;flex-shrink:0;}
+.eng-num{font-size:.75rem;font-weight:600;color:#B8956A;}
+.eng-title{font-size:.875rem;font-weight:600;color:#2B2B2B;margin-bottom:8px;line-height:1.3;}
+.eng-desc{font-size:.8125rem;font-weight:300;color:#6B7280;line-height:1.7;}
+.cta-section{padding:96px 0;background:#fff;border-top:var(--section-divider);text-align:center;}
+.cta-section .section-title{max-width:480px;margin-left:auto;margin-right:auto;margin-bottom:16px;}
+.cta-section .cta-sub{font-size:.875rem;font-weight:300;color:#6B7280;max-width:420px;margin:0 auto 40px;line-height:1.75;}
+.service-max{max-width:780px;}
+@media(max-width:1024px){.engagement-grid{grid-template-columns:repeat(2,1fr);}.engagement-grid::before{display:none;}}
+@media(max-width:640px){.engagement-grid{grid-template-columns:1fr;}.services-page-hero{padding:64px 0;}}
+</style>
+<title>Consultancy Services | Golden Inning Consultancy</title>
+</head>
+<body>
+<nav class="site-nav"><div class="container"><div class="nav-inner">
+<a href="index.html" class="nav-logo"><div class="nav-logo-mark">GI</div><div><div class="nav-logo-text">Golden Inning Consultancy</div><div class="nav-logo-sub">Construction Chemicals Advisory</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="industry-segments.html">Industry Segments</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="index.html#videos">Videos</a></li><li><a href="contact.html">Contact</a></li></ul>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></div>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="industry-segments.html">Industry Segments</a><a href="services.html" class="active">Services</a><a href="index.html#videos">Videos</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<!-- Page Hero -->
+<div class="services-page-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a>
+<span class="breadcrumb-sep">/</span>
+<span>Services</span>
+</div>
+<p class="section-label" style="margin-top:16px;">Services</p>
+<h1 class="page-title">Consultancy Services</h1>
+<p class="page-desc" style="color:#9A9590;font-size:.9rem;font-weight:300;">End-to-end advisory for construction chemicals manufacturing</p>
+</div>
+</div>
+
+<!-- Section 1: Project Setup Advisory -->
+<section class="service-section white">
+<div class="container">
+<div class="service-max">
+<p class="section-label">Phase 1</p>
+<h2 class="section-title">Project Setup Advisory</h2>
+<div class="title-divider"></div>
+<p class="service-lead">Comprehensive support for promoters establishing new construction chemicals manufacturing plants.</p>
+<ul class="service-bullets">
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Plant planning</span> &mdash; Site selection, plant layout design, and capacity planning aligned with business objectives</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Machinery selection</span> &mdash; Identifying and sourcing the right mixing, filling, and processing equipment for your product range</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Production process setup</span> &mdash; Establishing standard operating procedures, raw material specifications, and batch production workflows</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Raw material sourcing</span> &mdash; Guidance on supplier identification, quality benchmarks, and cost-effective procurement</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Trial production support</span> &mdash; On-site support during initial production runs to troubleshoot and optimise early output</span></li>
+</ul>
+<div class="highlight-card"><p>From greenfield planning to first production batch &mdash; we guide every step.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Section 2: Production Stabilisation -->
+<section class="service-section grey">
+<div class="container">
+<div class="service-max">
+<p class="section-label">Phase 2</p>
+<h2 class="section-title">Production Stabilisation</h2>
+<div class="title-divider"></div>
+<p class="service-lead">Post-commissioning support to stabilise operations and build consistent quality output.</p>
+<ul class="service-bullets">
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Process optimisation</span> &mdash; Reducing variability, improving cycle times, and increasing output per batch</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Quality systems</span> &mdash; Implementing in-process quality checks, finished goods testing protocols, and documentation</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Production efficiency improvement</span> &mdash; Labour deployment, equipment utilisation, and shift planning</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Waste reduction</span> &mdash; Identifying material loss points and implementing controls to reduce input waste</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Troubleshooting</span> &mdash; Addressing formulation issues, equipment bottlenecks, and process inconsistencies</span></li>
+</ul>
+<div class="highlight-card"><p>Typical plants achieve stable production within 60&ndash;90 days of commissioning with structured support.</p></div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: Business Advisory -->
+<section class="service-section white">
+<div class="container">
+<div class="service-max">
+<p class="section-label">Phase 3</p>
+<h2 class="section-title">Business Advisory</h2>
+<div class="title-divider"></div>
+<p class="service-lead">Strategic guidance to position your brand, launch products, and build distribution networks.</p>
+<ul class="service-bullets">
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Product launch strategy</span> &mdash; Positioning products for your target market, pricing guidance, and launch sequencing</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Market positioning</span> &mdash; Identifying competitive advantages and crafting a consultancy-led brand narrative</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Distribution development</span> &mdash; Building dealer and contractor networks, trade channel strategy</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Brand and packaging advisory</span> &mdash; Product naming, technical data sheet structure, label guidance</span></li>
+<li><span class="bullet-dot"></span><span><span class="bullet-title">Regulatory and compliance</span> &mdash; Understanding relevant quality standards and certifications required in your market</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Section 4: Engagement Process -->
+<section class="service-section grey no-border">
+<div class="container">
+<p class="section-label">Our Approach</p>
+<h2 class="section-title">Engagement Process</h2>
+<div class="title-divider"></div>
+<p style="color:#6B7280;font-size:.875rem;font-weight:300;margin-bottom:8px;">A structured, milestone-based engagement model.</p>
+<div class="engagement-grid">
+<div class="eng-step">
+<div class="eng-circle"><span class="eng-num">1</span></div>
+<p class="eng-title">Initial Assessment</p>
+<p class="eng-desc">Understanding your project scope, location, investment size, and product objectives</p>
+</div>
+<div class="eng-step">
+<div class="eng-circle"><span class="eng-num">2</span></div>
+<p class="eng-title">Advisory Plan</p>
+<p class="eng-desc">A structured plan covering plant setup, machinery, and product portfolio recommendations</p>
+</div>
+<div class="eng-step">
+<div class="eng-circle"><span class="eng-num">3</span></div>
+<p class="eng-title">Implementation Support</p>
+<p class="eng-desc">On-site and remote support during plant setup and trial production phases</p>
+</div>
+<div class="eng-step">
+<div class="eng-circle"><span class="eng-num">4</span></div>
+<p class="eng-title">Ongoing Advisory</p>
+<p class="eng-desc">Continued support for production optimisation and business development</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 5: CTA -->
+<div class="cta-section">
+<div class="container">
+<h2 class="section-title">Ready to Start Your Manufacturing Journey?</h2>
+<p class="cta-sub">Whether you are planning a new plant or stabilising existing operations, we can help.</p>
+<a href="index.html#contact" class="btn btn-outline-gold">Request Consultation</a>
+</div>
+</div>
+
+<footer><div class="container"><div class="footer-grid">
+<div><div class="footer-logo-row"><div class="footer-logo-mark">GI</div><div class="footer-brand-name">Golden Inning Consultancy</div></div><div class="footer-brand-sub">Construction Chemicals Manufacturing Advisory</div></div>
+<div><div class="footer-col-title">Contact</div><a href="mailto:devrajgohil@gmail.com" class="footer-link">devrajgohil@gmail.com</a></div>
+<div><div class="footer-col-title">Follow</div><div class="social-links">
+<a href="https://www.linkedin.com/in/devrajgohil/" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+<a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="currentColor" stroke="none"/></svg></a>
+</div></div></div>
+<div class="footer-bottom"><span>&copy; 2026 Golden Inning Consultancy. All rights reserved.</span></div>
+</div></div></footer>
+<script src="js/main.js"></script>
+</body></html>

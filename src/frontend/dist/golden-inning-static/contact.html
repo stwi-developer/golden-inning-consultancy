@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.contact-page-hero{padding:96px 0;background:#fff;border-bottom:var(--section-divider);}
+.contact-section{padding:96px 0;background:#fff;border-bottom:var(--section-divider);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:900px;}
+.contact-intro-title{font-size:1.375rem;font-weight:600;color:#2B2B2B;margin-bottom:24px;font-family:'Bricolage Grotesque','Inter',sans-serif;}
+.contact-intro-text{font-size:.9rem;line-height:1.9;font-weight:300;color:#4B4540;margin-bottom:16px;}
+.contact-item{display:flex;align-items:flex-start;gap:16px;padding-bottom:24px;border-bottom:var(--section-divider);}
+.contact-item:last-child{border-bottom:none;padding-bottom:0;}
+.contact-icon{flex-shrink:0;margin-top:2px;}
+.contact-icon svg{width:20px;height:20px;stroke:#B8956A;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.contact-label{font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#9CA3AF;margin-bottom:4px;}
+.contact-value{font-size:.875rem;font-weight:500;color:#2B2B2B;text-decoration:none;transition:color .2s;}
+.contact-value:hover{color:#B8956A;}
+.contact-details-col{display:flex;flex-direction:column;gap:0;}
+.enquiry-section{padding:96px 0;background:#FAFAFA;border-bottom:var(--section-divider);}
+.enquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 56px;max-width:760px;}
+.enquiry-item{display:flex;align-items:flex-start;gap:14px;}
+.enq-dot{width:6px;height:6px;border-radius:50%;background:#B8956A;flex-shrink:0;margin-top:6px;}
+.enq-title{font-size:.875rem;font-weight:600;color:#2B2B2B;margin-bottom:4px;}
+.enq-desc{font-size:.8125rem;font-weight:300;color:#6B7280;line-height:1.7;}
+.cta-contact-section{padding:96px 0;background:#fff;text-align:center;}
+.cta-contact-section .section-title{max-width:400px;margin:0 auto 16px;}
+.cta-contact-section .cta-sub{font-size:.875rem;font-weight:300;color:#6B7280;max-width:360px;margin:0 auto 40px;line-height:1.75;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:48px;}.enquiry-grid{grid-template-columns:1fr;}}
+@media(max-width:640px){.contact-page-hero{padding:64px 0;}.contact-section,.enquiry-section,.cta-contact-section{padding:64px 0;}}
+</style>
+<title>Contact | Golden Inning Consultancy</title>
+</head>
+<body>
+<nav class="site-nav"><div class="container"><div class="nav-inner">
+<a href="index.html" class="nav-logo"><div class="nav-logo-mark">GI</div><div><div class="nav-logo-text">Golden Inning Consultancy</div><div class="nav-logo-sub">Construction Chemicals Advisory</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="industry-segments.html">Industry Segments</a></li><li><a href="services.html">Services</a></li><li><a href="videos.html">Videos</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></div>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="industry-segments.html">Industry Segments</a><a href="services.html">Services</a><a href="videos.html">Videos</a><a href="contact.html" class="active">Contact</a></div>
+</nav>
+
+<!-- Page Hero -->
+<div class="contact-page-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a>
+<span class="breadcrumb-sep">/</span>
+<span>Contact</span>
+</div>
+<p class="section-label" style="margin-top:16px;">Get In Touch</p>
+<h1 class="page-title">Contact</h1>
+<p class="page-desc" style="color:#9A9590;font-size:.9rem;font-weight:300;">Reach out to discuss your manufacturing project or consultancy requirements.</p>
+</div>
+</div>
+
+<!-- Contact Info Section -->
+<section class="contact-section">
+<div class="container">
+<div class="contact-grid">
+  <!-- Left: Intro -->
+  <div>
+    <p class="section-label">Direct Contact</p>
+    <div class="contact-intro-title">Devraj Gohil</div>
+    <div class="title-divider"></div>
+    <p class="contact-intro-text">Senior construction chemicals industry professional with 34+ years of experience. Available for consultancy enquiries related to plant setup, production, and business advisory.</p>
+    <p class="contact-intro-text" style="color:#6B7280;">Preferred contact: email or LinkedIn.</p>
+  </div>
+  <!-- Right: Contact Details -->
+  <div>
+    <p class="section-label" style="margin-bottom:32px;">Contact Details</p>
+    <div class="contact-details-col">
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <a href="mailto:devrajgohil@gmail.com" class="contact-value">devrajgohil@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/devrajgohil/" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/devrajgohil</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="#B8956A" stroke="none"/></svg>
+        </div>
+        <div>
+          <div class="contact-label">YouTube</div>
+          <a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="contact-value">youtube.com/@GoldenInning</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Areas of Enquiry -->
+<section class="enquiry-section">
+<div class="container">
+<p class="section-label">Areas of Enquiry</p>
+<h2 class="section-title">How We Can Help</h2>
+<div class="title-divider"></div>
+<div class="enquiry-grid" style="margin-top:48px;">
+  <div class="enquiry-item">
+    <span class="enq-dot"></span>
+    <div><div class="enq-title">New Plant Setup</div><div class="enq-desc">Enquiries related to setting up a new construction chemicals manufacturing facility.</div></div>
+  </div>
+  <div class="enquiry-item">
+    <span class="enq-dot"></span>
+    <div><div class="enq-title">Production Stabilisation</div><div class="enq-desc">Support for plants already commissioned but experiencing output or quality challenges.</div></div>
+  </div>
+  <div class="enquiry-item">
+    <span class="enq-dot"></span>
+    <div><div class="enq-title">Product Portfolio Development</div><div class="enq-desc">Guidance on selecting and developing the right product range for your target market.</div></div>
+  </div>
+  <div class="enquiry-item">
+    <span class="enq-dot"></span>
+    <div><div class="enq-title">Business &amp; Market Advisory</div><div class="enq-desc">Strategic advice on product launch, distribution development, and brand positioning.</div></div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-contact-section">
+<div class="container">
+<h2 class="section-title">Ready to Start a Conversation?</h2>
+<p class="cta-sub">Write to us at the email below and we will respond within 1&ndash;2 business days.</p>
+<a href="mailto:devrajgohil@gmail.com" class="btn btn-outline-gold">Send an Email</a>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-grid">
+<div><div class="footer-logo-row"><div class="footer-logo-mark">GI</div><div class="footer-brand-name">Golden Inning Consultancy</div></div><div class="footer-brand-sub">Construction Chemicals Manufacturing Advisory</div></div>
+<div><div class="footer-col-title">Contact</div><a href="mailto:devrajgohil@gmail.com" class="footer-link">devrajgohil@gmail.com</a></div>
+<div><div class="footer-col-title">Follow</div><div class="social-links">
+<a href="https://www.linkedin.com/in/devrajgohil/" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+<a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="currentColor" stroke="none"/></svg></a>
+</div></div></div>
+<div class="footer-bottom"><span>&copy; 2026 Golden Inning Consultancy. All rights reserved.</span></div>
+</div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
