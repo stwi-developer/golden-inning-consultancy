@@ -79,7 +79,7 @@ export default function Navbar() {
   // Nav order: Home, About, Industry Segments, Services, Videos, Contact
   const navItems: NavItem[] = [
     { type: "scroll", label: "Home", hash: "#home", ocid: "nav.link.1" },
-    { type: "scroll", label: "About", hash: "#about", ocid: "nav.link.2" },
+    { type: "link", label: "About", to: "/about", ocid: "nav.link.2" },
     {
       type: "link",
       label: "Industry Segments",

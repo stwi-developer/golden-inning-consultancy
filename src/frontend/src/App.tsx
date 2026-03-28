@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import TrustStrip from "./components/TrustStrip";
 import Videos from "./components/Videos";
+import AboutPage from "./pages/AboutPage";
 import CategoryPage from "./pages/CategoryPage";
 import IndustrySegmentsPage from "./pages/IndustrySegmentsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
@@ -65,6 +66,12 @@ const indexRoute = createRoute({
   component: HomePage,
 });
 
+const aboutRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/about",
+  component: AboutPage,
+});
+
 const industrySegmentsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/industry-segments",
@@ -91,6 +98,7 @@ const videosRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
+  aboutRoute,
   industrySegmentsRoute,
   categoryRoute,
   productDetailRoute,

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.about-page-hero{padding:96px 0;background:#fff;border-bottom:var(--section-divider);}
+.journey-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative;}
+.journey-steps::before{content:'';position:absolute;top:19px;left:10%;right:10%;height:1px;background:var(--light-grey);z-index:0;}
+.journey-step{display:flex;flex-direction:column;align-items:flex-start;}
+.step-circle{width:40px;height:40px;border-radius:50%;border:2px solid #B8956A;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;z-index:1;flex-shrink:0;}
+.step-num{font-size:.75rem;font-weight:600;color:#B8956A;}
+.step-label{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#B8956A;margin-bottom:4px;}
+.step-title{font-size:.875rem;font-weight:600;color:#2B2B2B;line-height:1.3;}
+.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 48px;}
+.expertise-item{display:flex;align-items:center;gap:12px;}
+.expertise-check{width:20px;height:20px;flex-shrink:0;color:#B8956A;}
+.expertise-check svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;}
+.expertise-text{font-size:.875rem;color:#4B4540;line-height:1.6;}
+.focus-list{list-style:none;max-width:480px;margin-bottom:56px;}
+.focus-list li{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:var(--section-divider);font-size:.875rem;color:#4B4540;font-weight:300;line-height:1.7;}
+.focus-list li:first-child{border-top:var(--section-divider);}
+.focus-dot{width:6px;height:6px;border-radius:50%;background:#B8956A;flex-shrink:0;margin-top:7px;}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.intro-image{border-radius:4px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07);}
+.intro-image img{width:100%;height:420px;object-fit:cover;filter:brightness(.96)saturate(.85);display:block;}
+.role-list{list-style:none;margin-top:16px;}
+.role-list li{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:.875rem;color:#4B4540;}
+.role-dot{width:6px;height:6px;border-radius:50%;background:#B8956A;flex-shrink:0;}
+@media(max-width:1024px){.journey-steps{grid-template-columns:repeat(2,1fr);}.journey-steps::before{display:none;}.expertise-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.intro-grid{grid-template-columns:1fr;gap:40px;}.journey-steps{grid-template-columns:repeat(2,1fr);}.expertise-grid{grid-template-columns:1fr;}.about-page-hero{padding:64px 0;}}
+</style>
+<title>About Devraj Gohil | Golden Inning Consultancy</title>
+</head>
+<body>
+<nav class="site-nav"><div class="container"><div class="nav-inner">
+<a href="index.html" class="nav-logo"><div class="nav-logo-mark">GI</div><div><div class="nav-logo-text">Golden Inning Consultancy</div><div class="nav-logo-sub">Construction Chemicals Advisory</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html" class="active">About</a></li><li><a href="industry-segments.html">Industry Segments</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#videos">Videos</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></div>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="industry-segments.html">Industry Segments</a><a href="index.html#services">Services</a><a href="index.html#videos">Videos</a><a href="index.html#contact">Contact</a></div>
+</nav>
+
+<!-- Page Hero / Breadcrumb -->
+<div class="about-page-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a>
+<span class="breadcrumb-sep">/</span>
+<span>About</span>
+</div>
+<p class="section-label" style="margin-top:16px;">About</p>
+<h1 class="page-title">About Devraj Gohil</h1>
+<p class="page-desc" style="color:#9A9590;font-size:.9rem;font-weight:300;">Senior Industry Professional &nbsp;|&nbsp; 34+ Years in Construction Chemicals</p>
+</div>
+</div>
+
+<!-- Section 1: Introduction -->
+<section style="padding:120px 0;background:#fff;border-bottom:var(--section-divider);">
+<div class="container">
+<div class="intro-grid">
+<div class="intro-image">
+<img src="assets/uploads/about-photo.jpg" alt="Construction chemicals manufacturing" onerror="this.onerror=null;this.src='assets/generated/about-plant.dim_800x600.jpg';"/>
+</div>
+<div>
+<p class="section-label">Introduction</p>
+<h2 class="section-title">34+ Years of Industry Leadership</h2>
+<div class="title-divider"></div>
+<p style="color:#4B4540;font-size:.9rem;line-height:1.9;font-weight:300;margin-bottom:20px;">Devraj Gohil is a senior industry professional with 34+ years of experience in the Construction Chemicals sector.</p>
+<p style="color:#2B2B2B;font-size:.875rem;font-weight:500;margin-bottom:12px;">He has held leadership roles including:</p>
+<ul class="role-list">
+<li><span class="role-dot"></span>Chief Operating Officer</li>
+<li><span class="role-dot"></span>Business Head</li>
+<li><span class="role-dot"></span>National Sales &amp; Marketing Head</li>
+<li><span class="role-dot"></span>Manufacturing Leadership Roles</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 2: Industry Expertise -->
+<section style="padding:120px 0;background:#FAFAFA;border-bottom:var(--section-divider);">
+<div class="container">
+<p class="section-label">Expertise</p>
+<h2 class="section-title">Industry Expertise</h2>
+<div class="title-divider"></div>
+<p style="color:#6B7280;font-size:.875rem;font-weight:300;margin-bottom:48px;">Experience includes:</p>
+<div class="expertise-grid">
+<div class="expertise-item"><div class="expertise-check"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><span class="expertise-text">Construction chemical manufacturing</span></div>
+<div class="expertise-item"><div class="expertise-check"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><span class="expertise-text">Tile adhesives</span></div>
+<div class="expertise-item"><div class="expertise-check"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><span class="expertise-text">Dry mix mortars</span></div>
+<div class="expertise-item"><div class="expertise-check"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><span class="expertise-text">Waterproofing systems</span></div>
+<div class="expertise-item"><div class="expertise-check"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><span class="expertise-text">Production operations</span></div>
+<div class="expertise-item"><div class="expertise-check"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><span class="expertise-text">National sales and business strategy</span></div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: Professional Journey -->
+<section style="padding:120px 0;background:#fff;border-bottom:var(--section-divider);">
+<div class="container">
+<p class="section-label">Career</p>
+<h2 class="section-title">Professional Journey</h2>
+<div class="title-divider"></div>
+<p style="color:#4B4540;font-size:.9rem;line-height:1.9;font-weight:300;max-width:600px;margin-bottom:16px;">Started career as Operator and Chemist, progressed through multiple leadership roles to Chief Operating Officer, managing manufacturing operations and national sales.</p>
+<p style="color:#4B4540;font-size:.9rem;line-height:1.9;font-weight:300;max-width:600px;">This practical experience provides a complete perspective from production floor to business strategy.</p>
+<div style="position:relative;margin-top:56px;">
+<div class="journey-steps">
+<div class="journey-step">
+<div class="step-circle"><span class="step-num">1</span></div>
+<p class="step-label">Career Start</p>
+<p class="step-title">Operator / Chemist</p>
+</div>
+<div class="journey-step">
+<div class="step-circle"><span class="step-num">2</span></div>
+<p class="step-label">Mid Career</p>
+<p class="step-title">Leadership Roles</p>
+</div>
+<div class="journey-step">
+<div class="step-circle"><span class="step-num">3</span></div>
+<p class="step-label">Senior Leadership</p>
+<p class="step-title">Business Head / Sales Head</p>
+</div>
+<div class="journey-step">
+<div class="step-circle"><span class="step-num">4</span></div>
+<p class="step-label">Executive</p>
+<p class="step-title">Chief Operating Officer</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 4: Consultancy Focus -->
+<section style="padding:120px 0;background:#FAFAFA;">
+<div class="container">
+<p class="section-label">Services</p>
+<h2 class="section-title">Consultancy Focus</h2>
+<div class="title-divider"></div>
+<p style="color:#6B7280;font-size:.875rem;font-weight:300;margin-bottom:40px;">Golden Inning consultancy helps promoters:</p>
+<ul class="focus-list">
+<li><span class="focus-dot"></span>Set up manufacturing plants</li>
+<li><span class="focus-dot"></span>Develop product portfolio</li>
+<li><span class="focus-dot"></span>Stabilise production</li>
+<li><span class="focus-dot"></span>Launch construction chemical businesses successfully</li>
+</ul>
+<a href="index.html#contact" class="btn btn-outline-gold">Request Consultation</a>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-grid">
+<div><div class="footer-logo-row"><div class="footer-logo-mark">GI</div><div class="footer-brand-name">Golden Inning Consultancy</div></div><div class="footer-brand-sub">Construction Chemicals Manufacturing Advisory</div></div>
+<div><div class="footer-col-title">Contact</div><a href="mailto:devrajgohil@gmail.com" class="footer-link">devrajgohil@gmail.com</a></div>
+<div><div class="footer-col-title">Follow</div><div class="social-links">
+<a href="https://www.linkedin.com/in/devrajgohil/" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+<a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="currentColor" stroke="none"/></svg></a>
+</div></div></div>
+<div class="footer-bottom"><span>&copy; 2026 Golden Inning Consultancy. All rights reserved.</span></div>
+</div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
