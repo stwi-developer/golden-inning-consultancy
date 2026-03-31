@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+/* ── Services Page Styles ── */
+.srv-hero{padding:96px 0 80px;background:#fff;border-bottom:var(--section-divider);}
+.srv-tagline{display:inline-flex;align-items:flex-start;gap:12px;padding:14px 20px;background:#FAF7F3;border:1px solid #E8DDD0;border-radius:4px;margin-top:24px;max-width:640px;}
+.srv-tagline-arrow{font-size:1rem;line-height:1.3;flex-shrink:0;}
+.srv-tagline-text{font-size:.875rem;font-weight:500;color:#2B2B2B;line-height:1.6;}
+/* Split section */
+.srv-split{display:flex;align-items:stretch;border-bottom:var(--section-divider);}
+.srv-split.reverse{flex-direction:row-reverse;}
+.srv-split.white{background:#fff;}
+.srv-split.grey{background:#FAFAFA;}
+.srv-img-col{width:42%;flex-shrink:0;overflow:hidden;}
+.srv-img-col img{width:100%;height:100%;object-fit:cover;min-height:360px;filter:contrast(.95)brightness(.98);display:block;}
+.srv-content-col{flex:1;padding:64px 64px 64px 56px;display:flex;flex-direction:column;justify-content:center;}
+.srv-split.reverse .srv-content-col{padding:64px 56px 64px 64px;}
+.srv-number-row{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.srv-number{font-size:.72rem;font-weight:600;letter-spacing:.2em;color:#B8956A;}
+.srv-number-line{height:1px;width:32px;background:#EAEAEA;}
+.srv-title{font-size:clamp(1.35rem,2.5vw,1.9rem);font-weight:600;color:#1A1A1A;margin-bottom:16px;line-height:1.25;}
+.srv-desc{font-size:.875rem;line-height:1.9;font-weight:300;color:#4B4540;margin-bottom:28px;max-width:500px;}
+.srv-support-label{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#B8956A;margin-bottom:14px;}
+.srv-bullets{list-style:none;margin-bottom:28px;}
+.srv-bullets li{display:flex;align-items:flex-start;gap:12px;padding:8px 0;font-size:.85rem;color:#2B2B2B;line-height:1.7;}
+.srv-bullet-dot{width:6px;height:6px;border-radius:50%;background:#B8956A;flex-shrink:0;margin-top:6px;}
+.srv-objective{padding:16px 20px;border-left:3px solid #B8956A;background:#FAF7F3;border-radius:0 4px 4px 0;}
+.srv-objective-label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#B8956A;margin-bottom:6px;}
+.srv-objective-text{font-size:.8125rem;font-weight:300;color:#5A4A38;line-height:1.75;margin:0;}
+/* CTA */
+.srv-cta{padding:96px 0;background:#fff;border-top:var(--section-divider);text-align:center;}
+.srv-cta-label{font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#A07840;margin-bottom:12px;}
+.srv-cta-title{font-size:clamp(1.35rem,2.5vw,1.9rem);font-weight:600;color:#1A1A1A;margin-bottom:12px;}
+.srv-cta-sub{font-size:.875rem;font-weight:300;color:#6B7280;max-width:400px;margin:0 auto 36px;line-height:1.9;}
+/* Responsive */
+@media(max-width:1024px){
+.srv-content-col{padding:48px 40px;}
+.srv-split.reverse .srv-content-col{padding:48px 40px;}
+}
+@media(max-width:768px){
+.srv-split,.srv-split.reverse{flex-direction:column;}
+.srv-img-col{width:100%;height:240px;}
+.srv-img-col img{min-height:240px;height:240px;}
+.srv-content-col,.srv-split.reverse .srv-content-col{padding:40px 24px;}
+.srv-hero{padding:64px 0 56px;}
+.srv-cta{padding:64px 0;}
+}
+</style>
+<title>Consultancy Services | Golden Inning Consultancy</title>
+</head>
+<body>
+<nav class="site-nav"><div class="container"><div class="nav-inner">
+<a href="index.html" class="nav-logo"><div class="nav-logo-mark">GI</div><div><div class="nav-logo-text">Golden Inning Consultancy</div><div class="nav-logo-sub">Construction Chemicals Advisory</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="industry-segments.html">Industry Segments</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="index.html#videos">Videos</a></li><li><a href="contact.html">Contact</a></li></ul>
+<button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></div>
+<div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="about.html">About</a><a href="industry-segments.html">Industry Segments</a><a href="services.html" class="active">Services</a><a href="index.html#videos">Videos</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<!-- Page Hero -->
+<div class="srv-hero">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Home</a>
+<span class="breadcrumb-sep">/</span>
+<span>Services</span>
+</div>
+<p class="section-label" style="margin-top:16px;">What We Do</p>
+<h1 class="page-title">Consultancy Services</h1>
+<div class="srv-tagline">
+<span class="srv-tagline-arrow">&#128073;</span>
+<span class="srv-tagline-text">From Plant Setup to Market Success &ndash; Complete Manufacturing &amp; Business Advisory</span>
+</div>
+</div>
+</div>
+
+<!-- Service 1: Manufacturing Plant Setup -->
+<div class="srv-split white">
+<div class="srv-img-col">
+<!-- ✏️ TO CHANGE SERVICE 1 IMAGE: replace the src below -->
+<img src="assets/assets/generated/service-plant-setup.dim_900x500.jpg" alt="Construction chemicals manufacturing plant interior"/>
+</div>
+<div class="srv-content-col">
+<div class="srv-number-row"><span class="srv-number">01</span><div class="srv-number-line"></div></div>
+<h2 class="srv-title">Manufacturing Plant Setup</h2>
+<p class="srv-desc">End-to-end advisory for establishing construction chemicals manufacturing facilities, with a focus on dry-mix mortars, tile adhesives, and waterproofing systems.</p>
+<p class="srv-support-label">Support includes</p>
+<ul class="srv-bullets">
+<li><span class="srv-bullet-dot"></span>Plant layout planning and equipment selection</li>
+<li><span class="srv-bullet-dot"></span>Raw material handling and storage systems</li>
+<li><span class="srv-bullet-dot"></span>Production process design and workflow setup</li>
+<li><span class="srv-bullet-dot"></span>Vendor guidance for machinery and key materials</li>
+<li><span class="srv-bullet-dot"></span>Installation coordination and commissioning support</li>
+</ul>
+<div class="srv-objective">
+<p class="srv-objective-label">Objective</p>
+<p class="srv-objective-text">To ensure a practical, cost-efficient, and scalable manufacturing setup ready for commercial production.</p>
+</div>
+</div>
+</div>
+
+<!-- Service 2: Product Portfolio Development -->
+<div class="srv-split grey reverse">
+<div class="srv-img-col">
+<!-- ✏️ TO CHANGE SERVICE 2 IMAGE: replace the src below -->
+<img src="assets/assets/generated/service-product-portfolio.dim_900x500.jpg" alt="Product portfolio development and packaging"/>
+</div>
+<div class="srv-content-col">
+<div class="srv-number-row"><span class="srv-number">02</span><div class="srv-number-line"></div></div>
+<h2 class="srv-title">Product Portfolio Development</h2>
+<p class="srv-desc">Strategic development of a market-relevant product range aligned with application needs and profitability.</p>
+<p class="srv-support-label">Support includes</p>
+<ul class="srv-bullets">
+<li><span class="srv-bullet-dot"></span>Product range planning (C1T, C2T, C2TE, C2TES1, grouts, waterproofing, etc.)</li>
+<li><span class="srv-bullet-dot"></span>Technical formulation strategy and positioning</li>
+<li><span class="srv-bullet-dot"></span>Packaging concept and product segmentation</li>
+<li><span class="srv-bullet-dot"></span>TDS (Technical Data Sheet) and product documentation guidance</li>
+<li><span class="srv-bullet-dot"></span>Alignment of product performance with target market segment</li>
+</ul>
+<div class="srv-objective" style="background:#fff;">
+<p class="srv-objective-label">Objective</p>
+<p class="srv-objective-text">To build a balanced product portfolio combining technical performance and commercial viability.</p>
+</div>
+</div>
+</div>
+
+<!-- Service 3: Production Stabilisation -->
+<div class="srv-split white">
+<div class="srv-img-col">
+<!-- ✏️ TO CHANGE SERVICE 3 IMAGE: replace the src below -->
+<img src="assets/assets/generated/service-production-stabilisation.dim_900x500.jpg" alt="Quality control in construction chemicals laboratory"/>
+</div>
+<div class="srv-content-col">
+<div class="srv-number-row"><span class="srv-number">03</span><div class="srv-number-line"></div></div>
+<h2 class="srv-title">Production Stabilisation</h2>
+<p class="srv-desc">Focused support to achieve consistent product quality and stable production operations after plant setup.</p>
+<p class="srv-support-label">Support includes</p>
+<ul class="srv-bullets">
+<li><span class="srv-bullet-dot"></span>Batch standardisation and process control</li>
+<li><span class="srv-bullet-dot"></span>Quality control systems and testing protocols</li>
+<li><span class="srv-bullet-dot"></span>Raw material consistency management</li>
+<li><span class="srv-bullet-dot"></span>Troubleshooting during initial production phase</li>
+<li><span class="srv-bullet-dot"></span>Operator and production team training</li>
+</ul>
+<div class="srv-objective">
+<p class="srv-objective-label">Objective</p>
+<p class="srv-objective-text">To ensure reliable, repeatable production output with minimal variation and operational issues.</p>
+</div>
+</div>
+</div>
+
+<!-- Service 4: Business Growth Strategy -->
+<div class="srv-split grey reverse" style="border-bottom:none;">
+<div class="srv-img-col">
+<!-- ✏️ TO CHANGE SERVICE 4 IMAGE: replace the src below -->
+<img src="assets/assets/generated/service-business-growth.dim_900x500.jpg" alt="Business growth strategy and market planning"/>
+</div>
+<div class="srv-content-col">
+<div class="srv-number-row"><span class="srv-number">04</span><div class="srv-number-line"></div></div>
+<h2 class="srv-title">Business Growth Strategy</h2>
+<p class="srv-desc">Advisory support to develop a sustainable and scalable business model in the construction chemicals market.</p>
+<p class="srv-support-label">Support includes</p>
+<ul class="srv-bullets">
+<li><span class="srv-bullet-dot"></span>Pricing strategy and margin structure</li>
+<li><span class="srv-bullet-dot"></span>Distributor and dealer network planning</li>
+<li><span class="srv-bullet-dot"></span>Go-to-market strategy and regional expansion planning</li>
+<li><span class="srv-bullet-dot"></span>Sales and technical support framework</li>
+<li><span class="srv-bullet-dot"></span>Product positioning aligned with market demand</li>
+</ul>
+<div class="srv-objective" style="background:#fff;">
+<p class="srv-objective-label">Objective</p>
+<p class="srv-objective-text">To support promoters in building a profitable and long-term growth-oriented business.</p>
+</div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="srv-cta">
+<div class="container">
+<p class="srv-cta-label">Get Started</p>
+<h2 class="srv-cta-title">Ready to Start Your Manufacturing Journey?</h2>
+<p class="srv-cta-sub">Whether you are planning a new plant or looking to scale your existing operations, we are here to guide every step.</p>
+<a href="contact.html" class="btn btn-outline-gold">Request Consultation</a>
+</div>
+</div>
+
+<footer><div class="container"><div class="footer-grid">
+<div><div class="footer-logo-row"><div class="footer-logo-mark">GI</div><div class="footer-brand-name">Golden Inning Consultancy</div></div><div class="footer-brand-sub">Construction Chemicals Manufacturing Advisory</div></div>
+<div><div class="footer-col-title">Contact</div><a href="mailto:devrajgohil@gmail.com" class="footer-link">devrajgohil@gmail.com</a></div>
+<div><div class="footer-col-title">Follow</div><div class="social-links">
+<a href="https://www.linkedin.com/in/devrajgohil/" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+<a href="https://www.youtube.com/@GoldenInning" target="_blank" rel="noopener" class="social-btn"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95C1 8.12 1 12 1 12s0 3.88.46 5.58a2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95C23 15.88 23 12 23 12s0-3.88-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98" fill="currentColor" stroke="none"/></svg></a>
+</div></div></div>
+<div class="footer-bottom"><span>&copy; 2026 Golden Inning Consultancy. All rights reserved.</span></div>
+</div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
